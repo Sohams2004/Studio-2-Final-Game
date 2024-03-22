@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Movement_2D : MonoBehaviour
 {
+    [SerializeField] public States states;
+
     [SerializeField] float movementSpeed = 5.0f;
 
-    [SerializeField] Rigidbody2D playerRb;
+    [SerializeField] public bool isGrounded, isDoubleJump;
 
-    private void Start()
-    {
-        playerRb = GetComponent<Rigidbody2D>();
-    }
+    [SerializeField] public Rigidbody2D playerRb;
+    [SerializeField] public CapsuleCollider2D capsuleCollider;
 
-    void Movement()
+
+
+    public void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
 
-        Vector2 playerMove = new Vector2 (horizontal * movementSpeed, 0);
+        Vector2 playerMove = new Vector2(horizontal * movementSpeed, playerRb.velocity.y);
         playerRb.velocity = playerMove;
-    }
 
-    private void Update()
-    {
-        Movement();
+        if (playerRb.velocity.x != 0)
+        {
+            states = States.move;
+        }
+
+        else if (playerRb.velocity.x == 0)
+        {
+            states = States.idle;
+        }
     }
 }
