@@ -31,9 +31,6 @@ public class PlayerCrouch : PlayerJump
 
     public void Update()
     {
-        Crouch();
-        Movement();
-        Jump();
-        GroundCheck();
+       
     }
 }

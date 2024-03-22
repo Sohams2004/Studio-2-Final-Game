@@ -7,5 +7,6 @@ public enum States
     idle,
     move,
     jump,
-    crouch
+    crouch,
+    attack
 }

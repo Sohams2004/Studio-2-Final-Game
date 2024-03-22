@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 257581279}
   - component: {fileID: 257581282}
   - component: {fileID: 257581283}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 257581278}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.47, y: 0.9, z: 0}
+  m_LocalPosition: {x: -2.61, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -553,9 +553,8 @@ GameObject:
   - component: {fileID: 1150948034}
   - component: {fileID: 1150948033}
   - component: {fileID: 1150948032}
-  - component: {fileID: 1150948036}
-  - component: {fileID: 1150948035}
   - component: {fileID: 1150948037}
+  - component: {fileID: 1150948035}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -658,11 +657,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150948031}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.14999962, y: -0.63, z: 0.032436155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2108078482}
   m_Father: {fileID: 239772667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1150948035
@@ -692,29 +692,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1150948036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150948031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6d5b575506940b4193793d5fed5b300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  states: 0
-  movementSpeed: 7.5
-  isGrounded: 0
-  isDoubleJump: 0
-  playerRb: {fileID: 0}
-  capsuleCollider: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  rayLength: 1.52
-  jumpForce: 7
 --- !u!114 &1150948037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +704,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d579a08624d0940b0e3a83a2217f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  states: 0
+  movementSpeed: 7.5
+  facingDirection: 0
+  isGrounded: 0
+  isDoubleJump: 0
+  playerRb: {fileID: 0}
+  capsuleCollider: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  rayLength: 1.34
+  jumpForce: 7
+  attackRange: 0.88
+  repulseForce: 14.6
+  attackPos: {fileID: 2108078482}
+  opponentLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1355112513
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +981,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2108078481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108078482}
+  m_Layer: 0
+  m_Name: Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108078482
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108078481}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.45, y: 0.14, z: -0.05572761}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1150948034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
