@@ -15,6 +15,10 @@ public class FighterCamController : MonoBehaviour
     void Start()
     {
         cam = GetComponent<Camera>();
+
+        player1 = GameObject.FindWithTag("Player 1").GetComponent<Transform>();
+        
+        player2 = GameObject.FindWithTag("Player 2").GetComponent<Transform>();
     }
 
     void Update()
