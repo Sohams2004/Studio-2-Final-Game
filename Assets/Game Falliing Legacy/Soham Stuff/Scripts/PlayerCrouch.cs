@@ -13,7 +13,7 @@ public class PlayerCrouch : PlayerJump
                 capsuleCollider.offset = new Vector2(0, -0.5f);
                 capsuleCollider.size = new Vector2(1, 1);
                 gameObject.transform.localScale = new Vector2(1, 0.5f);
-                states = States.crouch;
+                states = States1.crouch;
             }
         }
 
@@ -24,7 +24,7 @@ public class PlayerCrouch : PlayerJump
                 capsuleCollider.offset = new Vector2(0, 0);
                 capsuleCollider.size = new Vector2(1, 2);
                 gameObject.transform.localScale = new Vector2(1, 1f);
-                states = States.idle;
+                states = States1.idle;
             }
         }
     }
