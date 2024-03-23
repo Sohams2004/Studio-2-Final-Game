@@ -1,0 +1,448 @@
+fileFormatVersion: 2
+guid: fbf39d0b9ae3fef4997a43988b0cd387
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 320
+        width: 167
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ee8c46753f53043838fdf7caed374c
+      internalID: -1265831651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 320
+        width: 167
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dbc881902f1ea4bb38322a19f19479
+      internalID: 468007167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_2
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 273
+        width: 167
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab874431c6893d4b8c6cd298885ff74
+      internalID: -383654866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 273
+        width: 167
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3472b4e65904d642ab206112ae8adbd
+      internalID: -1395229476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 220
+        width: 167
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2dd9d66fcf4914a955df15c14a5a51
+      internalID: 1191589577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 221
+        width: 167
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bfa39a6b53a2c4bb9de7c6bef65535
+      internalID: -1417013984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 170
+        width: 167
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13269ff282d28e842b8d6582177eaed9
+      internalID: 1195361654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 170
+        width: 167
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d50c6fe0bac3fb44bd12141be954f99
+      internalID: 1830549486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 117
+        width: 167
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d66f2ec921340843a7a2a098938ed6b
+      internalID: 225366411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_9
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 119
+        width: 167
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55000563e55a6f0448ba5d5710589dbe
+      internalID: -1887909094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 67
+        width: 167
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60159e9542ea7104a947ad565e0beb6a
+      internalID: 1514219645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_11
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 67
+        width: 167
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d946003f169c34686093cbc8104743
+      internalID: -42223243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_12
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 14
+        width: 167
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81e601aab4e52049b07c19c1f41a29b
+      internalID: -1398573031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-soil-ground-layer-cartoon-game-png-image_6410313_13
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 14
+        width: 167
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dc24abc9b836347b8e497af158d6fd
+      internalID: 1974624560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_0: -1265831651
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_1: 468007167
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_10: 1514219645
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_11: -42223243
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_12: -1398573031
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_13: 1974624560
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_2: -383654866
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_3: -1395229476
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_4: 1191589577
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_5: -1417013984
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_6: 1195361654
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_7: 1830549486
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_8: 225366411
+      pngtree-soil-ground-layer-cartoon-game-png-image_6410313_9: -1887909094
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
