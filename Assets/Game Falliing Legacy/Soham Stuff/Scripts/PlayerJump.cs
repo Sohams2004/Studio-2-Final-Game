@@ -61,13 +61,13 @@ public class PlayerJump : Movement_2D
 
         if (playerRb.velocity.y != 0)
         {
-            states = States.jump;
+            states = States1.jump;
             anim.SetBool("Jump", true);
         }
 
         else if (playerRb.velocity.y == 0 && playerRb.velocity.x == 0)
         {
-            states = States.idle;
+            states = States1.idle;
             anim.SetBool("Jump", false);
 
         }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movement_2D : MonoBehaviour
 {
-    [SerializeField] public States states;
+    [SerializeField] public States1 states;
 
     [SerializeField] public float movementSpeed, facingDirection;
 
@@ -17,19 +17,15 @@ public class Movement_2D : MonoBehaviour
     public void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        GameObject player = playerRb.gameObject;
 
         if (horizontal > 0)
         {
             facingDirection = 1;
-
-
         }
 
         else if (horizontal < 0)
         {
             facingDirection = -1;
-
         }
 
         Vector2 playerMove = new Vector2(horizontal * movementSpeed, playerRb.velocity.y);
@@ -37,13 +33,13 @@ public class Movement_2D : MonoBehaviour
 
         if (playerRb.velocity.x != 0)
         {
-            states = States.move;
+            states = States1.move;
             anim.SetBool("Run", true);
         }
 
         else if (playerRb.velocity.x == 0)
         {
-            states = States.idle;
+            states = States1.idle;
             anim.SetBool("Run", false);
         }
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Attack : PlayerCrouch
 {
     [SerializeField] float attackRange, repulseForce;
@@ -11,7 +12,7 @@ public class Attack : PlayerCrouch
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Attacked");
-            states = States.attack;
+            states = States1.attack;
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
             anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
