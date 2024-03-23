@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
     {
         float moveInput = Input.GetAxis("Horizontal"); ;
         rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
-        anim.SetFloat("Movement", rb.velocity.y);
+
         if (moveInput > 0 || moveInput < 0)
         {
 
