@@ -1,28 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Windows;
 
 public class Movement_2D : MonoBehaviour
 {
-    [SerializeField] float movementSpeed = 5.0f;
+    [SerializeField] public States states;
 
-    [SerializeField] Rigidbody2D playerRb;
+    [SerializeField] public float movementSpeed, facingDirection;
 
-    private void Start()
-    {
-        playerRb = GetComponent<Rigidbody2D>();
-    }
+    [SerializeField] public bool isGrounded, isDoubleJump;
 
-    void Movement()
+    [SerializeField] public Rigidbody2D playerRb;
+    [SerializeField] public CapsuleCollider2D capsuleCollider;
+
+
+
+    public void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
+        GameObject player = playerRb.gameObject;
 
-        Vector2 playerMove = new Vector2 (horizontal * movementSpeed, 0);
+        if (horizontal > 0)
+        {
+            facingDirection = 1;
+
+        }
+
+        else if (horizontal < 0)
+        {
+            facingDirection = -1;
+        }
+
+        Vector2 playerMove = new Vector2(horizontal * movementSpeed, playerRb.velocity.y);
         playerRb.velocity = playerMove;
-    }
 
-    private void Update()
-    {
-        Movement();
+        if (playerRb.velocity.x != 0)
+        {
+            states = States.move;
+        }
+
+        else if (playerRb.velocity.x == 0)
+        {
+            states = States.idle;
+        }
+
+        if (transform.localScale.x > 0 && playerRb.velocity.x < 0)
+        {
+            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+        }
+
+        else if (transform.localScale.x < 0 && playerRb.velocity.x > 0)
+        {
+            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+        }
     }
 }
