@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 //using UnityEngine.Windows;
 
@@ -14,7 +12,7 @@ public class Movement_2D : MonoBehaviour
     [SerializeField] public Rigidbody2D playerRb;
     [SerializeField] public CapsuleCollider2D capsuleCollider;
 
-
+    [SerializeField] public Animator anim;
 
     public void Movement()
     {
@@ -25,11 +23,13 @@ public class Movement_2D : MonoBehaviour
         {
             facingDirection = 1;
 
+
         }
 
         else if (horizontal < 0)
         {
             facingDirection = -1;
+
         }
 
         Vector2 playerMove = new Vector2(horizontal * movementSpeed, playerRb.velocity.y);
@@ -38,11 +38,13 @@ public class Movement_2D : MonoBehaviour
         if (playerRb.velocity.x != 0)
         {
             states = States.move;
+            anim.SetBool("Run", true);
         }
 
         else if (playerRb.velocity.x == 0)
         {
             states = States.idle;
+            anim.SetBool("Run", false);
         }
 
         if (transform.localScale.x > 0 && playerRb.velocity.x < 0)
