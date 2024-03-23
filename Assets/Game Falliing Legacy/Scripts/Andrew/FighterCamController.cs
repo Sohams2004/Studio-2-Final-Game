@@ -21,7 +21,7 @@ public class FighterCamController : MonoBehaviour
         player2 = GameObject.FindWithTag("Player 2").GetComponent<Transform>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         Vector3 centerPoint = (player1.position + player2.position) / 2f;
 
