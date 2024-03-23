@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class PlayerJump : Movement_2D
 {
     RaycastHit2D groundHit;
@@ -70,7 +69,7 @@ public class PlayerJump : Movement_2D
         {
             states = States.idle;
             anim.SetBool("Jump", false);
-            anim.SetBool("Fall", false);
+
         }
     }
 

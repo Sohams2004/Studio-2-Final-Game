@@ -37,10 +37,12 @@ public class Attack : PlayerCrouch
         Crouch();
         Jump();
         GroundCheck();
+
     }
 
     private void FixedUpdate()
     {
         Movement();
     }
+
 }
