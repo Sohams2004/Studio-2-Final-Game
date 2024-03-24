@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class Attack : PlayerCrouch
@@ -7,12 +8,16 @@ public class Attack : PlayerCrouch
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask opponentLayer;
 
-    string attackInput;
+    public string attackInput, xyz;
+
+    [SerializeField] PlayerInput playerInput;
 
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+
+        playerInput = GetComponent<PlayerInput>();
 
         switch (players)
         {
@@ -27,9 +32,23 @@ public class Attack : PlayerCrouch
                 horizontalInput = "Horizontal_P2";
                 jumpInput = "Jump_P2";
                 crouchInput = "Crouch_P2";
-                attackInput = "Fire2_P2";
+                attackInput = "Fire1_P2";
                 break;
         }
+        SetInput();
+    }
+
+    private void SetInput()
+    {
+        string horizontalAxis = $"Horizontal_P{playerInput.playerIndex + 1}";
+        string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
+        string crouchAxis = $"Crouch_P{playerInput.playerIndex + 1}";
+        attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
+
+        horizontalInput = horizontalAxis;
+        jumpInput = jumpAxis;
+        crouchInput = crouchAxis;
+
     }
 
     void PlayerAttack()
@@ -39,7 +58,7 @@ public class Attack : PlayerCrouch
             Debug.Log("Attacked");
             states = States1.attack;
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
-            anim.SetBool("Attack 1", true);
+            //anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
                 GameObject enemyTarget = target[i].gameObject;
@@ -48,7 +67,7 @@ public class Attack : PlayerCrouch
         }
         else
         {
-            anim.SetBool("Attack 1", false);
+            //anim.SetBool("Attack 1", false);
         }
     }
 
@@ -70,5 +89,4 @@ public class Attack : PlayerCrouch
     {
         Movement();
     }
-
 }
