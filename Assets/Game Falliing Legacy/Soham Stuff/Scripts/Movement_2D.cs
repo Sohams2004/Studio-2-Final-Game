@@ -20,7 +20,7 @@ public class Movement_2D : MonoBehaviour
     [SerializeField] public Rigidbody2D playerRb;
     [SerializeField] public CapsuleCollider2D capsuleCollider;
 
-    //[SerializeField] public Animator anim;
+    [SerializeField] public Animator anim;
 
     private void Start()
     {
@@ -47,13 +47,13 @@ public class Movement_2D : MonoBehaviour
         if (playerRb.velocity.x != 0)
         {
             states = States1.move;
-            //anim.SetBool("Run", true);
+            anim.SetBool("Run", true);
         }
 
         else if (playerRb.velocity.x == 0)
         {
             states = States1.idle;
-            //anim.SetBool("Run", false);
+            anim.SetBool("Run", false);
         }
 
         if (transform.localScale.x > 0 && playerRb.velocity.x < 0)

@@ -39,7 +39,7 @@ public class Attack : PlayerCrouch
             Debug.Log("Attacked");
             states = States1.attack;
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
-            //anim.SetBool("Attack 1", true);
+            anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
                 GameObject enemyTarget = target[i].gameObject;
@@ -48,7 +48,7 @@ public class Attack : PlayerCrouch
         }
         else
         {
-           // anim.SetBool("Attack 1", false);
+            anim.SetBool("Attack 1", false);
         }
     }
 
