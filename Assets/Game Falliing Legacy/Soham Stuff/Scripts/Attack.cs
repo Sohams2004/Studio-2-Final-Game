@@ -12,7 +12,6 @@ public class Attack : PlayerCrouch
 
     [SerializeField] PlayerInput playerInput;
 
-    string attackInput;
     private bool attack = false;
     public void OnAttack1(InputAction.CallbackContext context)
     {
