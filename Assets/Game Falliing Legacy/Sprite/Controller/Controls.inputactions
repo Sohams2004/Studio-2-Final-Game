@@ -13,12 +13,39 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "c8364746-b647-46f2-b7d5-4bd03c001317",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Block",
+                    "type": "Button",
+                    "id": "93ecbbcb-5b80-45c0-a9b6-7345e7da7020",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "c4e32ce4-67ba-4481-8656-cfb485d8a464",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "KeyBoard WASD",
-                    "id": "0ebed775-99c1-4a6d-a7e5-16247b3df6ee",
+                    "id": "1b7adbc7-0ae1-4e59-b9bd-7396753b002e",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -29,105 +56,128 @@
                 },
                 {
                     "name": "up",
-                    "id": "d48de671-e344-4f71-b1bc-ee1a6eb98503",
-                    "path": "<Joystick>/stick/up",
+                    "id": "35d3cd6a-87da-421a-bc5c-f467d776eafc",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "b2ea9601-79f2-450e-a0cb-aa4b2e39f491",
-                    "path": "<Joystick>/stick/down",
+                    "id": "4738b40b-c435-4fd2-bfa2-d973a5230740",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "2dc5153e-6759-4cf2-be48-db80cdb1954b",
-                    "path": "<Joystick>/stick/left",
+                    "id": "a974b02c-bcc7-45db-8e84-1d53dbb520ea",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "cda39fd8-c5c5-4bdd-b1b9-5d85c9eb1327",
-                    "path": "<Joystick>/stick/right",
+                    "id": "9552872d-d2ed-49f6-84cf-15ba4d0d3c10",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Analog Key",
-                    "id": "6a4123be-8d8d-4359-852f-03c380dda5bd",
-                    "path": "2DVector(mode=2)",
+                    "name": "",
+                    "id": "1fefc385-0ec6-4d76-9f5b-1839d1173249",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "Movement",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "ba0e3f78-82e5-47e2-b5ac-697fca1b465a",
-                    "path": "<Joystick>/stick/up",
+                    "name": "",
+                    "id": "b0bed8f1-c7cc-4d03-87d0-1917c2d16739",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Movement",
+                    "groups": "Keyboard",
+                    "action": "Jump",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "down",
-                    "id": "3c47d16e-d44b-488c-aa7f-7e10d536b11f",
-                    "path": "<Joystick>/stick/down",
+                    "name": "",
+                    "id": "86f80542-0ae3-4aff-9e4d-438c1b77ddb2",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Movement",
+                    "groups": "Controller",
+                    "action": "Jump",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "left",
-                    "id": "2de901f2-840f-42fb-a941-41b5dacb4157",
-                    "path": "<Joystick>/stick/left",
+                    "name": "",
+                    "id": "6d492dca-1e5d-4afe-8ace-5c8211558512",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Block",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "right",
-                    "id": "69d9f9a9-b276-48e5-a880-61d97c04a220",
-                    "path": "<Joystick>/stick/right",
+                    "name": "",
+                    "id": "14f456c3-b72b-45fa-bf56-cb59213e5172",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Movement",
+                    "groups": "Controller",
+                    "action": "Attack",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

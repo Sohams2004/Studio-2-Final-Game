@@ -1,23 +1,24 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
 public class Attack : PlayerCrouch
 {
-    [SerializeField] float attackRange, repulseForce;
+    public float attackRange, repulseForce;
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask opponentLayer;
+    [SerializeField] GameObject enemyTarget;
 
-    public string attackInput, xyz;
 
-    [SerializeField] PlayerInput playerInput;
-
+    string attackInput;
+    private bool attack = false;
+    public void OnAttack1(InputAction.CallbackContext context)
+    {
+        attack = context.action.triggered;
+    }
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
-
-        playerInput = GetComponent<PlayerInput>();
 
         switch (players)
         {
@@ -32,42 +33,28 @@ public class Attack : PlayerCrouch
                 horizontalInput = "Horizontal_P2";
                 jumpInput = "Jump_P2";
                 crouchInput = "Crouch_P2";
-                attackInput = "Fire1_P2";
+                attackInput = "Fire2_P2";
                 break;
         }
-        SetInput();
-    }
-
-    private void SetInput()
-    {
-        string horizontalAxis = $"Horizontal_P{playerInput.playerIndex + 1}";
-        string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
-        string crouchAxis = $"Crouch_P{playerInput.playerIndex + 1}";
-        attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
-
-        horizontalInput = horizontalAxis;
-        jumpInput = jumpAxis;
-        crouchInput = crouchAxis;
-
     }
 
     void PlayerAttack()
     {
-        if (Input.GetButtonDown(attackInput))
+        if (attack)
         {
             Debug.Log("Attacked");
             states = States1.attack;
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
-            //anim.SetBool("Attack 1", true);
+            anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
-                GameObject enemyTarget = target[i].gameObject;
+                enemyTarget = target[i].gameObject;
                 target[i].attachedRigidbody.AddForce(new Vector2(facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
             }
         }
         else
         {
-            //anim.SetBool("Attack 1", false);
+            anim.SetBool("Attack 1", false);
         }
     }
 
@@ -79,7 +66,7 @@ public class Attack : PlayerCrouch
     private void Update()
     {
         PlayerAttack();
-        Crouch();
+        Block();
         Jump();
         GroundCheck();
 
@@ -89,4 +76,5 @@ public class Attack : PlayerCrouch
     {
         Movement();
     }
+
 }
