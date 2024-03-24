@@ -8,7 +8,7 @@ public class Attack : PlayerCrouch
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask opponentLayer;
 
-    public string attackInput, xyz;
+    public string attackInput;
 
     [SerializeField] PlayerInput playerInput;
 
