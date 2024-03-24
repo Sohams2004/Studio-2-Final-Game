@@ -167,25 +167,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d579a08624d0940b0e3a83a2217f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: 0
   states: 0
   movementSpeed: 7.5
   facingDirection: 0
+  horizontalInput: Horizontal_P1
   isGrounded: 0
   isDoubleJump: 0
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
-  anim: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   rayLength: 1.34
   jumpForce: 7
+  jumpInput: Jump_P1
+  crouchInput: Crouch_P1
   attackRange: 0.88
   repulseForce: 14.6
   attackPos: {fileID: 2393140033157748645}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
+  attackInput: Fire1_P1
 --- !u!50 &4523143767956802729
 Rigidbody2D:
   serializedVersion: 4
