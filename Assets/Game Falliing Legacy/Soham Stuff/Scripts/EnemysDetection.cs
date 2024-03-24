@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemysDetection : EnemyMove
@@ -12,10 +10,16 @@ public class EnemysDetection : EnemyMove
 
     Collider2D[] detectPlayer;
     GameObject detectedPlayer;
-
+    public Animation animation;
+    public float attackRange, repulseForce;
+    [SerializeField] Transform attackPos;
+    [SerializeField] LayerMask opponentLayer;
+    [SerializeField] GameObject enemyTarget;
+    [SerializeField] public float facingDirection;
     private void Start()
     {
         enemyRb = GetComponent<Rigidbody2D>();
+
         isPatrol = true;
     }
 
@@ -38,7 +42,7 @@ public class EnemysDetection : EnemyMove
 
     void Chase()
     {
-        if(isChase)
+        if (isChase)
         {
             Vector2 chasePlayer = (detectedPlayer.transform.position - transform.position).normalized;
             enemyRb.velocity = chasePlayer * chaseSpeed;
@@ -54,7 +58,14 @@ public class EnemysDetection : EnemyMove
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Health Decreased");
+
+            Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
+
+            for (int i = 0; i < target.Length; i++)
+            {
+                enemyTarget = target[i].gameObject;
+                target[i].attachedRigidbody.AddForce(new Vector2(facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
+            }
         }
     }
 
