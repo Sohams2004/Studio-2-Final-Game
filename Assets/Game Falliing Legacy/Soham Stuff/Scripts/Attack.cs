@@ -6,6 +6,11 @@ public class Attack : PlayerCrouch
     public float attackRange, repulseForce;
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask opponentLayer;
+    [SerializeField] GameObject enemyTarget;
+
+    public string attackInput;
+
+    [SerializeField] PlayerInput playerInput;
 
     string attackInput;
     private bool attack = false;
@@ -46,7 +51,7 @@ public class Attack : PlayerCrouch
             anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
-                GameObject enemyTarget = target[i].gameObject;
+                enemyTarget = target[i].gameObject;
                 target[i].attachedRigidbody.AddForce(new Vector2(facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
             }
         }
