@@ -11,7 +11,7 @@ public class PlayerJump : Movement_2D
 
     private void Start()
     {
-     
+
     }
 
     public void GroundCheck()
