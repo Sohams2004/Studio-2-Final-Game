@@ -12,7 +12,6 @@ public class Attack : PlayerCrouch
 
     [SerializeField] PlayerInput playerInput;
 
-    string attackInput;
     private bool attack = false;
     public void OnAttack1(InputAction.CallbackContext context)
     {
@@ -46,14 +45,17 @@ public class Attack : PlayerCrouch
         if (attack)
         {
             Debug.Log("Attacked");
+
             states = States1.attack;
+
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
-            anim.SetBool("Attack 1", true);
+
             for (int i = 0; i < target.Length; i++)
             {
                 enemyTarget = target[i].gameObject;
                 target[i].attachedRigidbody.AddForce(new Vector2(facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
             }
+            anim.SetBool("Attack 1", true);
         }
         else
         {
