@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class PlayerCrouch : PlayerJump
 {
+    public string crouchInput;
+
+    private void Start()
+    {
+     
+    }
+
     public void Crouch()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Crouch"))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown(crouchInput))
         {
             if (isGrounded)
             {
@@ -17,7 +24,7 @@ public class PlayerCrouch : PlayerJump
             }
         }
 
-        else if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetButtonUp("Crouch"))
+        else if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetButtonUp(crouchInput))
         {
             if (isGrounded || !isGrounded)
             {

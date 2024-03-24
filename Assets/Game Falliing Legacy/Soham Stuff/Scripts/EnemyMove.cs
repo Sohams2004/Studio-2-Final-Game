@@ -10,6 +10,8 @@ public class EnemyMove : MonoBehaviour
 
     [SerializeField] private Transform[] points;
 
+    [SerializeField] public bool isPatrol;
+
     [SerializeField] public Rigidbody2D enemyRb;
 
     private void Start()
@@ -18,17 +20,20 @@ public class EnemyMove : MonoBehaviour
 
     public void EnemyPatrol()
     {
-        if (Vector2.Distance(transform.position, points[pointIndex].position) < 0.01f)
+        if (isPatrol)
         {
-            pointIndex += 1;
-
-            if (pointIndex == points.Length)
+            if (Vector2.Distance(transform.position, points[pointIndex].position) < 0.01f)
             {
-                pointIndex = 0;
-            }
-        }
+                pointIndex += 1;
 
-        transform.position = Vector2.MoveTowards(transform.position, points[pointIndex].position, patrolSpeed * Time.deltaTime);
+                if (pointIndex == points.Length)
+                {
+                    pointIndex = 0;
+                }
+            }
+
+            transform.position = Vector2.Lerp(transform.position, points[pointIndex].position, patrolSpeed * Time.deltaTime);
+        }
     }
 
     private void Update()
