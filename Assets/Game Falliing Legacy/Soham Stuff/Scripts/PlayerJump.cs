@@ -37,6 +37,7 @@ public class PlayerJump : Movement_2D
 
         if (Input.GetButtonDown(jumpInput))
         {
+            print(jumpInput);
             if (isGrounded)
             {
                 playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -52,7 +53,7 @@ public class PlayerJump : Movement_2D
 
         if (playerRb.velocity.y < -0.1f)
         {
-            anim.SetFloat("Movement", playerRb.velocity.y);
+            //anim.SetFloat("Movement", playerRb.velocity.y);
             playerRb.AddForce(Physics2D.gravity * playerRb.gravityScale * playerRb.mass);
 
         }
@@ -60,14 +61,14 @@ public class PlayerJump : Movement_2D
         if (playerRb.velocity.y != 0)
         {
             states = States1.jump;
-            anim.SetBool("Jump", true);
+            //anim.SetBool("Jump", true);
         }
 
         else if (playerRb.velocity.y == 0 && playerRb.velocity.x == 0)
         {
             states = States1.idle;
-            anim.SetBool("Jump", false);
-            anim.SetBool("Fall", false);
+            //anim.SetBool("Jump", false);
+            //anim.SetBool("Fall", false);
         }
     }
 
