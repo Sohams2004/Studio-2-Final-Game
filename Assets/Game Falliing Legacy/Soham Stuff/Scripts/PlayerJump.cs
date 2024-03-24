@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class PlayerJump : Movement_2D
 {
     RaycastHit2D groundHit;
@@ -11,10 +7,11 @@ public class PlayerJump : Movement_2D
 
     [SerializeField] float rayLength, jumpForce;
 
+    public string jumpInput;
+
     private void Start()
     {
-        playerRb = GetComponent<Rigidbody2D>();
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
+     
     }
 
     public void GroundCheck()
@@ -36,32 +33,41 @@ public class PlayerJump : Movement_2D
 
     public void Jump()
     {
-        if (Input.GetButtonDown("Jump"))
+
+
+        if (Input.GetButtonDown(jumpInput))
         {
-            if(isGrounded)
+            if (isGrounded)
             {
                 playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
             }
         }
 
-        if (Input.GetButtonUp("Jump") && playerRb.velocity.y > 0)
+        if (Input.GetButtonUp(jumpInput) && playerRb.velocity.y > 0)
         {
             playerRb.velocity = new Vector2(playerRb.velocity.x, playerRb.velocity.y * 0.5f);
+
         }
 
-        if(playerRb.velocity.y < -0.1f)
+        if (playerRb.velocity.y < -0.1f)
         {
+            anim.SetFloat("Movement", playerRb.velocity.y);
             playerRb.AddForce(Physics2D.gravity * playerRb.gravityScale * playerRb.mass);
+
         }
 
-        if(playerRb.velocity.y != 0)
+        if (playerRb.velocity.y != 0)
         {
-            states = States.jump;
+            states = States1.jump;
+            anim.SetBool("Jump", true);
         }
 
         else if (playerRb.velocity.y == 0 && playerRb.velocity.x == 0)
         {
-            states = States.idle;
+            states = States1.idle;
+            anim.SetBool("Jump", false);
+            anim.SetBool("Fall", false);
         }
     }
 

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
@@ -12,20 +10,20 @@ public class EnemySpawn : MonoBehaviour
 
     void Update()
     {
-        
+
         timer += Time.deltaTime;
 
-      
+
         if (timer >= delay && !hasSpawned)
         {
             SpawningPrefab();
-            hasSpawned = true; 
+            hasSpawned = true;
         }
     }
 
     void SpawningPrefab()
     {
-        
+
         Instantiate(SpawnPrefab, transform.position, Quaternion.identity);
     }
 }

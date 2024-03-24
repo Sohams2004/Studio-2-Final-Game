@@ -2,34 +2,66 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemysDetection : MonoBehaviour
+public class EnemysDetection : EnemyMove
 {
-    RaycastHit2D playerDetectHit;
     [SerializeField] LayerMask playerLayer;
 
-    [SerializeField] float rayLength;
+    [SerializeField] float detectionRange, chaseSpeed;
+
+    [SerializeField] bool isChase;
+
+    Collider2D[] detectPlayer;
+    GameObject detectedPlayer;
 
     private void Start()
     {
+        enemyRb = GetComponent<Rigidbody2D>();
+        isPatrol = true;
     }
 
-    void DetectPlayer()
+    public void DetectPlayer()
     {
-        playerDetectHit = Physics2D.Raycast(transform.position, Vector2.left, rayLength, playerLayer);
+        detectPlayer = Physics2D.OverlapCircleAll(transform.position, detectionRange, playerLayer);
 
-        if (playerDetectHit)
+        for (int i = 0; i < detectPlayer.Length; i++)
         {
-            Debug.Log("Player Detected");
+            detectedPlayer = detectPlayer[i].gameObject;
+
+            if (detectedPlayer)
+            {
+                Debug.Log("Player Detected");
+                isPatrol = false;
+                isChase = true;
+            }
+        }
+    }
+
+    void Chase()
+    {
+        if(isChase)
+        {
+            Vector2 chasePlayer = (detectedPlayer.transform.position - transform.position).normalized;
+            enemyRb.velocity = chasePlayer * chaseSpeed;
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(transform.position, Vector2.left * rayLength);
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Health Decreased");
+        }
     }
 
     private void Update()
     {
         DetectPlayer();
+        EnemyPatrol();
+        Chase();
     }
 }
