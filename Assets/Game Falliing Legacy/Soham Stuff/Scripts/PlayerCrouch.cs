@@ -1,43 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCrouch : PlayerJump
 {
     public string crouchInput;
-
+    private Attack attack;
+    private bool block = false;
     private void Start()
     {
-     
+        attack = GetComponent<Attack>();
     }
-
-    public void Crouch()
+    public void OnBlock(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown(crouchInput))
+        block = context.action.triggered;
+    }
+    public void Block()
+    {
+        if (block)
         {
             if (isGrounded)
             {
-                capsuleCollider.offset = new Vector2(0, -0.5f);
-                capsuleCollider.size = new Vector2(1, 1);
-                gameObject.transform.localScale = new Vector2(1, 0.5f);
-                states = States1.crouch;
+                anim.SetBool("Block", true);
+                if (attack != null)
+                {
+                    attack.repulseForce = 0;
+                }
+
             }
         }
 
-        else if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetButtonUp(crouchInput))
+        else
         {
             if (isGrounded || !isGrounded)
             {
-                capsuleCollider.offset = new Vector2(0, 0);
-                capsuleCollider.size = new Vector2(1, 2);
-                gameObject.transform.localScale = new Vector2(1, 1f);
-                states = States1.idle;
+                anim.SetBool("Block", false);
             }
         }
     }
 
-    public void Update()
-    {
-       
-    }
 }
