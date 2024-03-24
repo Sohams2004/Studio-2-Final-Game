@@ -24,6 +24,7 @@ public class FighterCamController : MonoBehaviour
     void LateUpdate()
     {
         Vector3 centerPoint = (player1.position + player2.position) / 2f;
+        centerPoint.z = transform.position.z;
 
         transform.position = Vector3.Lerp(transform.position, centerPoint, followSpeed * Time.deltaTime);
 
