@@ -40,10 +40,12 @@ public class Attack : PlayerCrouch
         }
     }
 
+
     void PlayerAttack()
     {
         if (attack)
         {
+            playerRb.velocity = Vector3.zero;
             Debug.Log("Attacked");
 
             states = States1.attack;

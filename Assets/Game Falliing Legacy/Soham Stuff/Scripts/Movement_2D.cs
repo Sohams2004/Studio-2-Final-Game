@@ -69,7 +69,11 @@ public class Movement_2D : MonoBehaviour
         {
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         }
+
     }
+
 }
+
+
 
 
