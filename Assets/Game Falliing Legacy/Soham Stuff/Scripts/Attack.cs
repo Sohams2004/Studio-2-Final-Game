@@ -1,14 +1,23 @@
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 public class Attack : PlayerCrouch
 {
-    [SerializeField] float attackRange, repulseForce;
+    public float attackRange, repulseForce;
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask opponentLayer;
+    [SerializeField] GameObject enemyTarget;
+
+    public string attackInput;
+
+    [SerializeField] PlayerInput playerInput;
 
     string attackInput;
-
+    private bool attack = false;
+    public void OnAttack1(InputAction.CallbackContext context)
+    {
+        attack = context.action.triggered;
+    }
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
@@ -34,7 +43,7 @@ public class Attack : PlayerCrouch
 
     void PlayerAttack()
     {
-        if (Input.GetButtonDown(attackInput))
+        if (attack)
         {
             Debug.Log("Attacked");
             states = States1.attack;
@@ -42,7 +51,7 @@ public class Attack : PlayerCrouch
             anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
-                GameObject enemyTarget = target[i].gameObject;
+                enemyTarget = target[i].gameObject;
                 target[i].attachedRigidbody.AddForce(new Vector2(facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
             }
         }
@@ -60,7 +69,7 @@ public class Attack : PlayerCrouch
     private void Update()
     {
         PlayerAttack();
-        Crouch();
+        Block();
         Jump();
         GroundCheck();
 

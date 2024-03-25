@@ -184,12 +184,13 @@ MonoBehaviour:
   jumpInput: Jump_P1
   crouchInput: Crouch_P1
   attackRange: 0.88
-  repulseForce: 14.6
+  repulseForce: 100
   attackPos: {fileID: 2393140033157748645}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
   attackInput: Fire1_P1
+  playerInput: {fileID: 0}
 --- !u!50 &4523143767956802729
 Rigidbody2D:
   serializedVersion: 4

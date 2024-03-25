@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 //using UnityEngine.Windows;
 
 public class Movement_2D : MonoBehaviour
@@ -21,27 +23,29 @@ public class Movement_2D : MonoBehaviour
     [SerializeField] public CapsuleCollider2D capsuleCollider;
 
     [SerializeField] public Animator anim;
+    private Vector2 movementInput = Vector2.zero;
 
-    private void Start()
+    public void OnMove(InputAction.CallbackContext context)
     {
-      
+        movementInput = context.ReadValue<Vector2>();
     }
+
 
     public void Movement()
     {
-        float horizontal = Input.GetAxis(horizontalInput);
 
-        if (horizontal > 0)
+
+        if (movementInput.x > 0)
         {
             facingDirection = 1;
         }
 
-        else if (horizontal < 0)
+        else if (movementInput.x < 0)
         {
             facingDirection = -1;
         }
 
-        Vector2 playerMove = new Vector2(horizontal * movementSpeed, playerRb.velocity.y);
+        Vector2 playerMove = new Vector2(movementInput.x * movementSpeed, playerRb.velocity.y);
         playerRb.velocity = playerMove;
 
         if (playerRb.velocity.x != 0)
