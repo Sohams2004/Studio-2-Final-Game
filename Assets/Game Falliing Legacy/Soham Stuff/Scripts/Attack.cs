@@ -1,14 +1,22 @@
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 public class Attack : PlayerCrouch
 {
-    [SerializeField] float attackRange, repulseForce;
+    public float attackRange, repulseForce;
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask opponentLayer;
+    [SerializeField] GameObject enemyTarget;
 
-    string attackInput;
+    public string attackInput;
 
+    [SerializeField] PlayerInput playerInput;
+
+    private bool attack = false;
+    public void OnAttack1(InputAction.CallbackContext context)
+    {
+        attack = context.action.triggered;
+    }
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
@@ -32,19 +40,24 @@ public class Attack : PlayerCrouch
         }
     }
 
+
     void PlayerAttack()
     {
-        if (Input.GetButtonDown(attackInput))
+        if (attack)
         {
+            playerRb.velocity = Vector3.zero;
             Debug.Log("Attacked");
+
             states = States1.attack;
+
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
-            anim.SetBool("Attack 1", true);
+
             for (int i = 0; i < target.Length; i++)
             {
-                GameObject enemyTarget = target[i].gameObject;
+                enemyTarget = target[i].gameObject;
                 target[i].attachedRigidbody.AddForce(new Vector2(facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
             }
+            anim.SetBool("Attack 1", true);
         }
         else
         {
@@ -60,7 +73,7 @@ public class Attack : PlayerCrouch
     private void Update()
     {
         PlayerAttack();
-        Crouch();
+        Block();
         Jump();
         GroundCheck();
 

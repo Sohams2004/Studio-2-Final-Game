@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 public class PlayerJump : Movement_2D
 {
     RaycastHit2D groundHit;
@@ -8,10 +10,14 @@ public class PlayerJump : Movement_2D
     [SerializeField] float rayLength, jumpForce;
 
     public string jumpInput;
-
+    private bool jump = false;
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        jump = context.action.triggered;
+    }
     private void Start()
     {
-     
+
     }
 
     public void GroundCheck()
@@ -35,7 +41,7 @@ public class PlayerJump : Movement_2D
     {
 
 
-        if (Input.GetButtonDown(jumpInput))
+        if (jump)
         {
             if (isGrounded)
             {
@@ -67,7 +73,7 @@ public class PlayerJump : Movement_2D
         {
             states = States1.idle;
             anim.SetBool("Jump", false);
-            anim.SetBool("Fall", false);
+
         }
     }
 

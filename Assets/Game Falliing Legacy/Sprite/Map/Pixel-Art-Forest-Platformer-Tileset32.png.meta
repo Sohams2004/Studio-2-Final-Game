@@ -1,0 +1,1042 @@
+fileFormatVersion: 2
+guid: 57265277486bb9a47b539922dcbd2954
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 752
+        width: 391
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf4727c510019d42b01984a5329c915
+      internalID: 958399334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_1
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 752
+        width: 269
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a33ef163c5f1749a24a2d1b8365ff1
+      internalID: -728390115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_2
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 760
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90beca3c98dad0478b83a092177dafe
+      internalID: 1916758211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_3
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 752
+        width: 136
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3827e7ae45d16d440b2c0a507f5fbb09
+      internalID: 514993100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_4
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 752
+        width: 136
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2e8199dbf316d4081cdd6db8eb8fb0
+      internalID: 872117097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 452
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4655ebe46a7340a4f95ee532173bbd0f
+      internalID: -1905953184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_6
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 619
+        width: 122
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda7851e2dc396c449eba5d3078d0e4c
+      internalID: -1899392561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_7
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 619
+        width: 125
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebe76f31edc6ca4a8e7dfa533526041
+      internalID: 1931302598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 620
+        width: 132
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ea12acdeb11ae40af09b1e904546f6
+      internalID: 474466715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_9
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 533
+        width: 133
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062b26cb66c587548824ba797eba9a8c
+      internalID: -1035636631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_10
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 487
+        width: 189
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b231dc502b3c8724a902dfefc9cceadb
+      internalID: 497496859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_11
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 488
+        width: 153
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929fa47d1212adf4e9e0f53e6ca68ae5
+      internalID: -314288972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_12
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 617
+        width: 187
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73377df2aa0afe44900424743212177
+      internalID: -1866674751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_13
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 612
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af4a6280447c0247b9267cf8cbcfd20
+      internalID: 2076517786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_14
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 601
+        width: 130
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241026d4c26160b4ba1a3b49791194af
+      internalID: 162762822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_15
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 569
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79816d795d0fb74bb030322d1fc100d
+      internalID: 1160840537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_16
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 528
+        width: 215
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e5d1607904079479c6c113f062d2de
+      internalID: -2127444213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_17
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 466
+        width: 236
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fadc18f5f3f034b95e447ba2c19bd4
+      internalID: 787889191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_18
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 355
+        width: 132
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b3b065a220e2945a641e93aa75975e
+      internalID: -1447769817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_19
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 354
+        width: 132
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81c807d1a73c0046943fa2f90de3ac3
+      internalID: -1988113260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_20
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 456
+        width: 134
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485081db43f7aca47a4ef6e9778e14c7
+      internalID: -11909108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 321
+        width: 255
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e2532182eec8d4cbd06bd8fa1339da
+      internalID: -1815689606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_22
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 352
+        width: 128
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f912dd44e43f645bbe1d2acd167173
+      internalID: 1699434691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_23
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 262
+        width: 135
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299c914e4b156fe4cb0ef910e45406f2
+      internalID: 1084036348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_24
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 344
+        width: 129
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6015db502b3ba1e44943bccb2a20b2c9
+      internalID: -1458778662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_25
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 384
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549d81fc3270a424fa204fc8f75b5898
+      internalID: 1612844270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_26
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 189
+        width: 111
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207419785db09fb4faef0aa2958643fb
+      internalID: 937438949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_27
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 233
+        width: 130
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3546d3b71f0e1084f94e2d65db7156b8
+      internalID: -1895355936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_28
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 220
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88d2df76839dd34c8e4791336a81e1f
+      internalID: -595443392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_29
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 221
+        width: 132
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb805fdb24ba0c46b9821fffd9a1849
+      internalID: -92708251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_30
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 311
+        width: 120
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31883d2726f5c9044837e9636ba9b064
+      internalID: 1006499623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_31
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 234
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb97ea900af9ce641b222a4d7a7a8620
+      internalID: 1090980308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_32
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 234
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f91c7811453464ea7ab8456d4e47ba
+      internalID: -797464364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 69
+        width: 119
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bba0a365b79c1540b31879d8054a9e2
+      internalID: -1046261061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_34
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 69
+        width: 119
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6315636ee027774884044fd68e48d77
+      internalID: 1266856519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_35
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 156
+        width: 90
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156c610d1656b4a419aaf16c013b6c15
+      internalID: 1781923113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_36
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 88
+        width: 135
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91883929fb24dc14abd50694c72634a9
+      internalID: -1301371756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_37
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 88
+        width: 133
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edca0cf8801c0b145808b00ade8a01d7
+      internalID: -772124742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 78
+        width: 98
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ec27c0aec5df242afaabb53d90a0ab
+      internalID: 902480865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_39
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 72
+        width: 131
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b58dcacb907384686adf90e9fe0c54
+      internalID: -685565117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel-Art-Forest-Platformer-Tileset32_40
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 76
+        width: 104
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b10394768e714eacc48f5fab0f0f6
+      internalID: -1935086422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pixel-Art-Forest-Platformer-Tileset32_0: 958399334
+      Pixel-Art-Forest-Platformer-Tileset32_1: -728390115
+      Pixel-Art-Forest-Platformer-Tileset32_10: 497496859
+      Pixel-Art-Forest-Platformer-Tileset32_11: -314288972
+      Pixel-Art-Forest-Platformer-Tileset32_12: -1866674751
+      Pixel-Art-Forest-Platformer-Tileset32_13: 2076517786
+      Pixel-Art-Forest-Platformer-Tileset32_14: 162762822
+      Pixel-Art-Forest-Platformer-Tileset32_15: 1160840537
+      Pixel-Art-Forest-Platformer-Tileset32_16: -2127444213
+      Pixel-Art-Forest-Platformer-Tileset32_17: 787889191
+      Pixel-Art-Forest-Platformer-Tileset32_18: -1447769817
+      Pixel-Art-Forest-Platformer-Tileset32_19: -1988113260
+      Pixel-Art-Forest-Platformer-Tileset32_2: 1916758211
+      Pixel-Art-Forest-Platformer-Tileset32_20: -11909108
+      Pixel-Art-Forest-Platformer-Tileset32_21: -1815689606
+      Pixel-Art-Forest-Platformer-Tileset32_22: 1699434691
+      Pixel-Art-Forest-Platformer-Tileset32_23: 1084036348
+      Pixel-Art-Forest-Platformer-Tileset32_24: -1458778662
+      Pixel-Art-Forest-Platformer-Tileset32_25: 1612844270
+      Pixel-Art-Forest-Platformer-Tileset32_26: 937438949
+      Pixel-Art-Forest-Platformer-Tileset32_27: -1895355936
+      Pixel-Art-Forest-Platformer-Tileset32_28: -595443392
+      Pixel-Art-Forest-Platformer-Tileset32_29: -92708251
+      Pixel-Art-Forest-Platformer-Tileset32_3: 514993100
+      Pixel-Art-Forest-Platformer-Tileset32_30: 1006499623
+      Pixel-Art-Forest-Platformer-Tileset32_31: 1090980308
+      Pixel-Art-Forest-Platformer-Tileset32_32: -797464364
+      Pixel-Art-Forest-Platformer-Tileset32_33: -1046261061
+      Pixel-Art-Forest-Platformer-Tileset32_34: 1266856519
+      Pixel-Art-Forest-Platformer-Tileset32_35: 1781923113
+      Pixel-Art-Forest-Platformer-Tileset32_36: -1301371756
+      Pixel-Art-Forest-Platformer-Tileset32_37: -772124742
+      Pixel-Art-Forest-Platformer-Tileset32_38: 902480865
+      Pixel-Art-Forest-Platformer-Tileset32_39: -685565117
+      Pixel-Art-Forest-Platformer-Tileset32_4: 872117097
+      Pixel-Art-Forest-Platformer-Tileset32_40: -1935086422
+      Pixel-Art-Forest-Platformer-Tileset32_5: -1905953184
+      Pixel-Art-Forest-Platformer-Tileset32_6: -1899392561
+      Pixel-Art-Forest-Platformer-Tileset32_7: 1931302598
+      Pixel-Art-Forest-Platformer-Tileset32_8: 474466715
+      Pixel-Art-Forest-Platformer-Tileset32_9: -1035636631
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
