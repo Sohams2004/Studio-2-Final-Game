@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1563138464935781094}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Player 1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.64, y: -0.64, z: 0.032436155}
-  m_LocalScale: {x: 2, y: 2, z: 1.257828}
+  m_LocalScale: {x: -2, y: 2, z: 1.257828}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8441608622522230299}
@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d579a08624d0940b0e3a83a2217f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRange: 0.88
+  repulseForce: 14.6
   players: 0
   states: 0
   movementSpeed: 5
@@ -210,7 +212,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   rayLength: 1
-  jumpForce: 5
+  jumpForce: 6
   jumpInput: 
   crouchInput: 
   attackRange: 0.88
@@ -218,7 +220,10 @@ MonoBehaviour:
   attackPos: {fileID: 8441608622522230299}
   opponentLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
+  enemyTarget: {fileID: 8362299643366010701}
+  attackInput: 
+  playerInput: {fileID: 1689094383132091418}
 --- !u!70 &2085497347883430414
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -269,7 +274,7 @@ Rigidbody2D:
   m_Mass: 7
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.9
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 481ffb5cf94141342bc25585566ac3dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -312,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8441608622522230299}
   m_Layer: 0
-  m_Name: Attack
+  m_Name: Attack 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
