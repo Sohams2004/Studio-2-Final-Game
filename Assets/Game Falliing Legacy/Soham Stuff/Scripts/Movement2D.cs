@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 //using UnityEngine.Windows;
 
-public class Movement_2D : MonoBehaviour
+public class Movement2D : MonoBehaviour,IPushable
+
 {
     public enum Players
     {
@@ -39,7 +40,15 @@ public class Movement_2D : MonoBehaviour
 
     public string jumpInput;
 
+    int numberOfHits = 0;
+    private bool stunned;
 
+    public void Push(Vector2 direction)
+    {
+        numberOfHits++;
+        playerRb.AddForce(numberOfHits * direction);
+        stunned = true;
+    }
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();

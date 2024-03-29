@@ -12,7 +12,7 @@ public class Attack : MonoBehaviour
 
     [SerializeField] PlayerInput playerInput;
 
-    Movement_2D movement;
+    Movement2D movement;
 
     private bool attack = false;
     public void OnAttack1(InputAction.CallbackContext context)
@@ -21,7 +21,7 @@ public class Attack : MonoBehaviour
     }
     private void Start()
     {
-        movement = FindObjectOfType<Movement_2D>();
+        movement = FindObjectOfType<Movement2D>();
     }
 
     void PlayerAttack()
