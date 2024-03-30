@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Attack : PlayerCrouch
+public class Attack : MonoBehaviour
 {
     public float attackRange, repulseForce;
     [SerializeField] Transform attackPos;
@@ -14,6 +14,8 @@ public class Attack : PlayerCrouch
 
     [SerializeField] PlayerInput playerInput;
 
+    Movement2D movement;
+
     private bool attack = false;
     public void OnAttack1(InputAction.CallbackContext context)
     {
@@ -21,76 +23,41 @@ public class Attack : PlayerCrouch
     }
     private void Start()
     {
-        playerRb = GetComponent<Rigidbody2D>();
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
-
-        switch (players)
-        {
-            case Players.Player1:
-                horizontalInput = "Horizontal_P1";
-                jumpInput = "Jump_P1";
-                crouchInput = "Crouch_P1";
-                attackInput = "Fire1_P1";
-                break;
-
-            case Players.Player2:
-                horizontalInput = "Horizontal_P2";
-                jumpInput = "Jump_P2";
-                crouchInput = "Crouch_P2";
-                attackInput = "Fire2_P2";
-                break;
-        }
+        movement = FindObjectOfType<Movement2D>();
     }
 
-
-    public void PlayerAttack()
+    void PlayerAttack()
     {
         if (attack)
         {
-
-            states = States1.attack;
-            anim.SetBool("Attack 1", true);
+            Debug.Log("Attacked");
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
-
+            movement.anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
                 enemyTarget = target[i].gameObject;
-                enemyTarget.GetComponent<Attack>().OntakeDamage();
+                target[i].attachedRigidbody.AddForce(new Vector2(movement.facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
             }
         }
         else
         {
-            anim.SetBool("Attack 1", false);
+            movement.anim.SetBool("Attack 1", false);
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(attackPos.position, attackRange);
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 
     private void Update()
     {
         PlayerAttack();
-        Block();
-        Jump();
-        GroundCheck();
-
     }
 
     private void FixedUpdate()
     {
-        if (!beingKnockedBack)
-        {
-            Movement();
-        }
-
-    }
-    public void OntakeDamage()
-    {
-        beingKnockedBack = true;
-        playerRb.AddForce(new Vector2(-direction, 0) * repulseForce, ForceMode2D.Impulse);
-        Invoke("StopKnockback", 2f);
+       
     }
 
     void StopKnockback()
