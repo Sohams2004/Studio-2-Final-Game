@@ -12,7 +12,7 @@ public class Death : MonoBehaviour
         if (other.tag == "Player 1")
         {
             await Task.Delay(300);
-            animator2.SetBool("Death", true);
+            animator1.SetBool("Death", true);
             await Task.Delay(1000);
             Destroy(other.gameObject);
             SceneManager.LoadScene(1);

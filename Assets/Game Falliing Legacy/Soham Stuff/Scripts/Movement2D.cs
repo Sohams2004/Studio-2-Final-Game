@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 //using UnityEngine.Windows;
 
-public class Movement2D : MonoBehaviour,IPushable
+public class Movement2D : MonoBehaviour, IPushable
 
 {
     public enum Players
@@ -12,19 +12,19 @@ public class Movement2D : MonoBehaviour,IPushable
         Player2
     }
 
-    [SerializeField]  Players players;
-    [SerializeField]  States1 states;
+    [SerializeField] Players players;
+    [SerializeField] States1 states;
 
-    [SerializeField]  float movementSpeed;
+    [SerializeField] float movementSpeed;
     [SerializeField] public float facingDirection;
     //public string horizontalInput;
 
-    [SerializeField]  bool isGrounded, isDoubleJump;
+    [SerializeField] bool isGrounded, isDoubleJump;
     [SerializeField] bool block = false;
     [SerializeField] bool jump = false;
 
-    [SerializeField]  Rigidbody2D playerRb;
-    [SerializeField]  CapsuleCollider2D capsuleCollider;
+    [SerializeField] Rigidbody2D playerRb;
+    [SerializeField] CapsuleCollider2D capsuleCollider;
 
     [SerializeField] public Animator anim;
     private Vector2 movementInput = Vector2.zero;
@@ -58,22 +58,22 @@ public class Movement2D : MonoBehaviour,IPushable
         anim = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
 
-       /* switch (players)
-        {
-            case Players.Player1:
-                horizontalInput = "Horizontal_P1";
-                jumpInput = "Jump_P1";
-                crouchInput = "Crouch_P1";
-                //attackInput = "Fire1_P1";
-                break;
+        /* switch (players)
+         {
+             case Players.Player1:
+                 horizontalInput = "Horizontal_P1";
+                 jumpInput = "Jump_P1";
+                 crouchInput = "Crouch_P1";
+                 //attackInput = "Fire1_P1";
+                 break;
 
-            case Players.Player2:
-                horizontalInput = "Horizontal_P2";
-                jumpInput = "Jump_P2";
-                crouchInput = "Crouch_P2";
-               // attackInput = "Fire2_P2";
-                break;
-        }*/
+             case Players.Player2:
+                 horizontalInput = "Horizontal_P2";
+                 jumpInput = "Jump_P2";
+                 crouchInput = "Crouch_P2";
+                // attackInput = "Fire2_P2";
+                 break;
+         }*/
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -208,10 +208,11 @@ public class Movement2D : MonoBehaviour,IPushable
 
     private void Update()
     {
+        Movement();
         Block();
         Jump();
         GroundCheck();
-        Movement();
+
     }
     private void OnDrawGizmos()
     {

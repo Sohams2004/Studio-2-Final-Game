@@ -6,10 +6,10 @@ public class Attack : MonoBehaviour
     public float attackRange, repulseForce;
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask opponentLayer;
-    [SerializeField] GameObject enemyTarget;
+
 
     [SerializeField] public float direction;
-    private bool beingKnockedBack;
+
     public string attackInput;
 
     [SerializeField] PlayerInput playerInput;
@@ -35,13 +35,14 @@ public class Attack : MonoBehaviour
             movement.anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
-                enemyTarget = target[i].gameObject;
+                GameObject enemyTarget = target[i].gameObject;
                 target[i].attachedRigidbody.AddForce(new Vector2(movement.facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
             }
         }
         else
         {
             movement.anim.SetBool("Attack 1", false);
+
         }
     }
 
@@ -55,13 +56,5 @@ public class Attack : MonoBehaviour
         PlayerAttack();
     }
 
-    private void FixedUpdate()
-    {
-       
-    }
 
-    void StopKnockback()
-    {
-        beingKnockedBack = false;
-    }
 }
