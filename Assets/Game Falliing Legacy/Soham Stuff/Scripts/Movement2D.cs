@@ -17,7 +17,7 @@ public class Movement2D : MonoBehaviour,IPushable
 
     [SerializeField]  float movementSpeed;
     [SerializeField] public float facingDirection;
-    public string horizontalInput;
+    //public string horizontalInput;
 
     [SerializeField]  bool isGrounded, isDoubleJump;
     [SerializeField] bool block = false;
@@ -29,7 +29,7 @@ public class Movement2D : MonoBehaviour,IPushable
     [SerializeField] public Animator anim;
     private Vector2 movementInput = Vector2.zero;
 
-    public string crouchInput;
+    //public string crouchInput;
     private Attack attack;
 
     RaycastHit2D groundHit;
@@ -38,10 +38,12 @@ public class Movement2D : MonoBehaviour,IPushable
 
     [SerializeField] float rayLength, jumpForce;
 
-    public string jumpInput;
+    //public string jumpInput;
 
     int numberOfHits = 0;
     private bool stunned;
+
+    [SerializeField] PlayerInput playerInput;
 
     public void Push(Vector2 direction)
     {
@@ -53,21 +55,23 @@ public class Movement2D : MonoBehaviour,IPushable
     {
         playerRb = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        anim = GetComponent<Animator>();
+        playerInput = GetComponent<PlayerInput>();
 
-        /*switch (players)
+       /* switch (players)
         {
             case Players.Player1:
                 horizontalInput = "Horizontal_P1";
                 jumpInput = "Jump_P1";
                 crouchInput = "Crouch_P1";
-                attackInput = "Fire1_P1";
+                //attackInput = "Fire1_P1";
                 break;
 
             case Players.Player2:
                 horizontalInput = "Horizontal_P2";
                 jumpInput = "Jump_P2";
                 crouchInput = "Crouch_P2";
-                attackInput = "Fire2_P2";
+               // attackInput = "Fire2_P2";
                 break;
         }*/
     }
@@ -172,15 +176,14 @@ public class Movement2D : MonoBehaviour,IPushable
             if (isGrounded)
             {
                 playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-
             }
         }
 
-        if (Input.GetButtonUp(jumpInput) && playerRb.velocity.y > 0)
+        /*if (Input.GetButtonUp(jumpInput) && playerRb.velocity.y > 0)
         {
             playerRb.velocity = new Vector2(playerRb.velocity.x, playerRb.velocity.y * 0.5f);
 
-        }
+        }*/
 
         if (playerRb.velocity.y < -0.1f)
         {

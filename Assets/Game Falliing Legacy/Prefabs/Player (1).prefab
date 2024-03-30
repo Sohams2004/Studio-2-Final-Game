@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6715768655779909222}
   - component: {fileID: 234903426609507088}
   - component: {fileID: 3464976916776550335}
+  - component: {fileID: 3489845981658988436}
   - component: {fileID: 6015142012561501067}
   - component: {fileID: 4936860924761323058}
   - component: {fileID: 4422566244735620485}
@@ -196,29 +197,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d579a08624d0940b0e3a83a2217f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: 0
-  states: 0
-  movementSpeed: 5
-  facingDirection: 0
-  horizontalInput: 
-  isGrounded: 0
-  isDoubleJump: 0
-  playerRb: {fileID: 0}
-  capsuleCollider: {fileID: 0}
-  anim: {fileID: 4422566244735620485}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  rayLength: 1
-  jumpForce: 5
-  jumpInput: 
-  crouchInput: 
   attackRange: 0.88
   repulseForce: 14.6
   attackPos: {fileID: 4037217564490703751}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 192
+  enemyTarget: {fileID: 0}
+  attackInput: 
+  playerInput: {fileID: 0}
+--- !u!114 &3489845981658988436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166295250138462442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d00aaf6b2eee8bc4b9039b3a419a5a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: 0
+  states: 0
+  movementSpeed: 10
+  facingDirection: 0
+  horizontalInput: 
+  isGrounded: 0
+  isDoubleJump: 0
+  block: 0
+  jump: 0
+  playerRb: {fileID: 0}
+  capsuleCollider: {fileID: 0}
+  anim: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  rayLength: 1
+  jumpForce: 10
+  jumpInput: 
+  playerInput: {fileID: 0}
 --- !u!70 &6015142012561501067
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

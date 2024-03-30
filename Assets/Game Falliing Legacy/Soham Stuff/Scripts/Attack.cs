@@ -45,14 +45,12 @@ public class Attack : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(attackPos.position, attackRange);
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 
     private void Update()
     {
         PlayerAttack();
-       
-
     }
 
     private void FixedUpdate()
