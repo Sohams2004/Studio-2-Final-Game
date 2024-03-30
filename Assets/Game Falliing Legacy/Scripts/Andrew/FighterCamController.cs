@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FighterCamController : MonoBehaviour
@@ -17,7 +15,7 @@ public class FighterCamController : MonoBehaviour
         cam = GetComponent<Camera>();
 
         player1 = GameObject.FindWithTag("Player 1").GetComponent<Transform>();
-        
+
         player2 = GameObject.FindWithTag("Player 2").GetComponent<Transform>();
     }
 

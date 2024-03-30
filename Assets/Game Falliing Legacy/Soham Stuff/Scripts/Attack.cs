@@ -8,6 +8,8 @@ public class Attack : PlayerCrouch
     [SerializeField] LayerMask opponentLayer;
     [SerializeField] GameObject enemyTarget;
 
+    [SerializeField] public float direction;
+    private bool beingKnockedBack;
     public string attackInput;
 
     [SerializeField] PlayerInput playerInput;
@@ -41,23 +43,20 @@ public class Attack : PlayerCrouch
     }
 
 
-    void PlayerAttack()
+    public void PlayerAttack()
     {
         if (attack)
         {
-            playerRb.velocity = Vector3.zero;
-            Debug.Log("Attacked");
 
             states = States1.attack;
-
+            anim.SetBool("Attack 1", true);
             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
 
             for (int i = 0; i < target.Length; i++)
             {
                 enemyTarget = target[i].gameObject;
-                target[i].attachedRigidbody.AddForce(new Vector2(facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
+                enemyTarget.GetComponent<Attack>().OntakeDamage();
             }
-            anim.SetBool("Attack 1", true);
         }
         else
         {
@@ -81,7 +80,21 @@ public class Attack : PlayerCrouch
 
     private void FixedUpdate()
     {
-        Movement();
+        if (!beingKnockedBack)
+        {
+            Movement();
+        }
+
+    }
+    public void OntakeDamage()
+    {
+        beingKnockedBack = true;
+        playerRb.AddForce(new Vector2(-direction, 0) * repulseForce, ForceMode2D.Impulse);
+        Invoke("StopKnockback", 2f);
     }
 
+    void StopKnockback()
+    {
+        beingKnockedBack = false;
+    }
 }

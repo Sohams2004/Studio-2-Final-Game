@@ -1481,7 +1481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2166295250138462442, guid: 1dc3b0abbfd094a429491beab2723153, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 3464976916776550335, guid: 1dc3b0abbfd094a429491beab2723153, type: 3}
       propertyPath: jumpForce
@@ -2238,7 +2238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296034007750483563, guid: bd28ff68a540e364182c4ca872648bad, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 5293692145088200663, guid: bd28ff68a540e364182c4ca872648bad, type: 3}
       propertyPath: m_GravityScale
