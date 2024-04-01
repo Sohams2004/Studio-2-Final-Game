@@ -146,7 +146,7 @@
                     "name": "",
                     "id": "14f456c3-b72b-45fa-bf56-cb59213e5172",
                     "path": "<Gamepad>/buttonWest",
-                    "interactions": "Tap",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Controller",
                     "action": "Attack",

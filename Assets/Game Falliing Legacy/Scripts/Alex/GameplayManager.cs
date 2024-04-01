@@ -11,7 +11,7 @@ public class GameplayManager : MonoBehaviour
         // Load selected characters and map based on PlayerPrefs or GameManager data
         int character1Index = PlayerPrefs.GetInt("Character1Index");
         int character2Index = PlayerPrefs.GetInt("Character2Index");
-        int mapIndex = PlayerPrefs.GetInt("MapIndex");
+       
 
         // Instantiate characters at spawn points
         InstantiateCharacter(character1Index, spawnPoints[0]);

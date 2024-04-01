@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,7 +26,8 @@ public class Movement2D : MonoBehaviour, IPushable
 
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] CapsuleCollider2D capsuleCollider;
-
+    [SerializeField] TMP_Text Knockbacktracker;
+    [SerializeField] int tracker;
     [SerializeField] public Animator anim;
     private Vector2 movementInput = Vector2.zero;
 
@@ -50,6 +52,8 @@ public class Movement2D : MonoBehaviour, IPushable
         numberOfHits++;
         playerRb.AddForce(numberOfHits * direction);
         stunned = true;
+        tracker = numberOfHits;
+        Knockbacktracker.text = tracker.ToString();
     }
     private void Start()
     {

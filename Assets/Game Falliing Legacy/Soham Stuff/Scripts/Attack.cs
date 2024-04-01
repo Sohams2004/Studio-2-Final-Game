@@ -30,14 +30,16 @@ public class Attack : MonoBehaviour
     {
         if (attack)
         {
-            Debug.Log("Attacked");
-            Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
             movement.anim.SetBool("Attack 1", true);
-            for (int i = 0; i < target.Length; i++)
-            {
-                GameObject enemyTarget = target[i].gameObject;
-                target[i].attachedRigidbody.AddForce(new Vector2(movement.facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
-            }
+
+            /* Debug.Log("Attacked");
+             Collider2D[] target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
+
+             for (int i = 0; i < target.Length; i++)
+             {
+                 GameObject enemyTarget = target[i].gameObject;
+                 target[i].attachedRigidbody.AddForce(new Vector2(movement.facingDirection, 0) * repulseForce, ForceMode2D.Impulse);
+             }*/
         }
         else
         {
