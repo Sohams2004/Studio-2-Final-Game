@@ -7,7 +7,6 @@ TagManager:
   - Ground
   - Player 1
   - Player 2
-  - Enemy
   layers:
   - Default
   - TransparentFX
