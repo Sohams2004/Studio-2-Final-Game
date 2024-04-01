@@ -123,6 +123,47 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &226737999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5890066815025678179, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+  m_PrefabInstance: {fileID: 955365707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!19719996 &226738003
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226737999}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &873047945
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,12 +310,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4451640195738351993, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890066815025678179, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890066815025678179, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151787936957050986, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151787936957050986, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151787936957050986, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8151787936957050986, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2139849101}
+    - targetCorrespondingSourceObject: {fileID: 5890066815025678179, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 226738003}
   m_SourcePrefab: {fileID: 100100000, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
 --- !u!1 &1607650136
 GameObject:
@@ -287,13 +354,14 @@ GameObject:
   - component: {fileID: 1607650137}
   - component: {fileID: 1607650139}
   - component: {fileID: 1607650138}
+  - component: {fileID: 1607650140}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1607650137
 Transform:
   m_ObjectHideFlags: 0
@@ -734,6 +802,28 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!64 &1607650140
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607650136}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1847779172
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +935,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2139849097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8151787936957050986, guid: 2b3ba3d21e63fc24a9ca6aeefe944dfc, type: 3}
+  m_PrefabInstance: {fileID: 955365707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!19719996 &2139849101
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139849097}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
