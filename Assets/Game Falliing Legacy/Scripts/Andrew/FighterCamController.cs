@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FighterCamController : MonoBehaviour
@@ -17,13 +15,14 @@ public class FighterCamController : MonoBehaviour
         cam = GetComponent<Camera>();
 
         player1 = GameObject.FindWithTag("Player 1").GetComponent<Transform>();
-        
+
         player2 = GameObject.FindWithTag("Player 2").GetComponent<Transform>();
     }
 
     void LateUpdate()
     {
         Vector3 centerPoint = (player1.position + player2.position) / 2f;
+        centerPoint.z = transform.position.z;
 
         transform.position = Vector3.Lerp(transform.position, centerPoint, followSpeed * Time.deltaTime);
 

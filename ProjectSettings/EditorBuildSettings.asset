@@ -6,6 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game Falliing Legacy/Scenes/SampleScene.unity
+    path: Assets/Game Falliing Legacy/Scenes/Game Scene/Menu.unity
+    guid: a260ff494b7598446b1f0062e42638de
+  - enabled: 1
+    path: Assets/Game Falliing Legacy/Scenes/Game Scene/Level Maps.unity
+    guid: 6e591f4bd3a0d574a94c7e6938faa926
+  - enabled: 1
+    path: Assets/Game Falliing Legacy/Scenes/Game Scene/Level 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Game Falliing Legacy/Scenes/Game Scene/Level 2.unity
+    guid: fb0a5388e78a82647b2a6b71433cd6c9
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: a0724eac58379794e97a5f3893260a65, type: 2}

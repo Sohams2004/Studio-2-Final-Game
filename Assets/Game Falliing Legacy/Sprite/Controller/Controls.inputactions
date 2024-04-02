@@ -11,7 +11,7 @@
                     "id": "04de244e-700c-4959-9c0f-097cbe58714a",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": true
                 },
                 {
@@ -146,7 +146,7 @@
                     "name": "",
                     "id": "14f456c3-b72b-45fa-bf56-cb59213e5172",
                     "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "Controller",
                     "action": "Attack",

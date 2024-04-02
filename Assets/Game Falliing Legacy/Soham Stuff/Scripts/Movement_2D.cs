@@ -11,6 +11,8 @@ public class Movement_2D : MonoBehaviour
         Player2
     }
 
+
+
     [SerializeField] public Players players;
     [SerializeField] public States1 states;
 
@@ -69,7 +71,11 @@ public class Movement_2D : MonoBehaviour
         {
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         }
+
     }
+
 }
+
+
 
 
