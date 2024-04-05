@@ -111,6 +111,8 @@ MonoBehaviour:
   isDoubleJump: 0
   block: 0
   jump: 0
+  jumpHeight: 1
+  jumpDuration: 1
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
   Knockbacktracker: {fileID: 0}
@@ -119,7 +121,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  rayLength: 1
+  rayLength: 5
   jumpForce: 0.4
   playerInput: {fileID: 0}
 --- !u!114 &234903426609507088
