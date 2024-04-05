@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.179, y: 1.386, z: 0.032436155}
-  m_LocalScale: {x: 2, y: 2, z: 1.257828}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4037217564490703751}
@@ -113,6 +113,8 @@ MonoBehaviour:
   jump: 0
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  Knockbacktracker: {fileID: 0}
+  tracker: 0
   anim: {fileID: 0}
   groundLayer:
     serializedVersion: 2
@@ -233,7 +235,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   direction: 0
-  attackInput: 
   playerInput: {fileID: 234903426609507088}
 --- !u!70 &6015142012561501067
 CapsuleCollider2D:
