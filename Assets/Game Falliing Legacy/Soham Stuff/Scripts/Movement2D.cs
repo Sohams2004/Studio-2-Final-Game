@@ -58,7 +58,6 @@ public class Movement2D : MonoBehaviour, IPushable
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
 

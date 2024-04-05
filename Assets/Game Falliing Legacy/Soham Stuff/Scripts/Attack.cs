@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +10,7 @@ public class Attack : MonoBehaviour
 
     [SerializeField] public float direction;
 
-    public string attackInput;
+
 
     [SerializeField] PlayerInput playerInput;
 
@@ -32,9 +31,10 @@ public class Attack : MonoBehaviour
     {
         if (attack)
         {
+            movement.anim.SetBool("Attack 1", true);
             Debug.Log("Attacked");
             target = Physics2D.OverlapCircleAll(attackPos.position, attackRange, opponentLayer);
-            movement.anim.SetBool("Attack 1", true);
+
             for (int i = 0; i < target.Length; i++)
             {
                 GameObject enemyTarget = target[i].gameObject;
