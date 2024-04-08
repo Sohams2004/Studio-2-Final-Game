@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.VersionControl.Asset;
 
 public class TestMovement2D : MonoBehaviour
 {
@@ -12,6 +9,7 @@ public class TestMovement2D : MonoBehaviour
         Player2
     }
 
+    [SerializeField] private int gravityNormal = 4, gravityFalling = 10;
     [SerializeField] public Players players;
     [SerializeField] public States1 states;
 
@@ -20,6 +18,7 @@ public class TestMovement2D : MonoBehaviour
 
     public string horizontalInput;
     public string jumpInput;
+
 
     [SerializeField] public bool isGrounded, isDoubleJump;
 
@@ -37,12 +36,20 @@ public class TestMovement2D : MonoBehaviour
     [SerializeField] public Animator anim;
     [SerializeField] float maxSpeed;
 
+    private float xScale;
+
+    private int ownId;
+
+    public int OwnId { get => ownId; }
+
     private void Start()
     {
+
+
         playerRb = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         anim = GetComponent<Animator>();
-
+        xScale = transform.localScale.x;
         testAttack = FindObjectOfType<TestAttack>();
 
 
@@ -56,14 +63,14 @@ public class TestMovement2D : MonoBehaviour
             case Players.Player1:
                 horizontalInput = "Horizontal_P1";
                 jumpInput = "Jump_P1";
-                //crouchInput = "Crouch_P1";
+                testAttack.crouchInput = "Crouch_P1";
                 testAttack.attackInput = "Fire1_P1";
                 break;
 
             case Players.Player2:
                 horizontalInput = "Horizontal_P2";
                 jumpInput = "Jump_P2";
-                // crouchInput = "Crouch_P2";
+                testAttack.crouchInput = "Crouch_P2";
                 testAttack.attackInput = "Fire1_P2";
                 break;
         }
@@ -76,10 +83,12 @@ public class TestMovement2D : MonoBehaviour
         string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
         string crouchAxis = $"Crouch_P{playerInput.playerIndex + 1}";
         testAttack.attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
+        ownId = playerInput.playerIndex + 1;
+
 
         horizontalInput = horizontalAxis;
         jumpInput = jumpAxis;
-        //crouchInput = crouchAxis;
+        testAttack.crouchInput = crouchAxis;
     }
 
 
@@ -98,34 +107,34 @@ public class TestMovement2D : MonoBehaviour
             facingDirection = -1;
         }
 
-        Vector2 playerMove = new Vector2(horizontal * movementSpeed, playerRb.velocity.y);
+        Vector2 playerMove = new Vector2(horizontal * movementSpeed, 0);
         playerRb.AddForce(playerMove);
 
-        if(playerRb.velocity.magnitude > maxSpeed)
+        if (playerRb.velocity.magnitude > maxSpeed)
         {
             playerRb.velocity = playerRb.velocity.normalized * maxSpeed;
         }
 
-        if (playerRb.velocity.x != 0)
+        if (Mathf.Abs(playerRb.velocity.x) > 0.01f)
         {
             states = States1.move;
             anim.SetBool("Run", true);
         }
 
-        else if (playerRb.velocity.x == 0)
+        else
         {
             states = States1.idle;
             anim.SetBool("Run", false);
         }
 
-        if (transform.localScale.x > 0 && playerRb.velocity.x < 0)
+        if (playerRb.velocity.x < -.01f)
         {
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+            transform.localScale = new Vector2(-transform.localScale.y, transform.localScale.y);
         }
 
-        else if (transform.localScale.x < 0 && playerRb.velocity.x > 0)
+        else if (playerRb.velocity.x > .01f)
         {
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+            transform.localScale = new Vector2(transform.localScale.y, transform.localScale.y);
         }
 
     }
@@ -147,7 +156,7 @@ public class TestMovement2D : MonoBehaviour
         }
     }
 
-    /*public void Jump()
+    public void Jump()
     {
 
 
@@ -156,35 +165,49 @@ public class TestMovement2D : MonoBehaviour
             print(jumpInput);
             if (isGrounded)
             {
+                print("force it up");
+
                 playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
         }
 
         if (Input.GetButtonUp(jumpInput) && playerRb.velocity.y > 0)
         {
-            playerRb.velocity = new Vector2(playerRb.velocity.x, playerRb.velocity.y * 0.5f);
+            //playerRb.velocity = new Vector2(playerRb.velocity.x, playerRb.velocity.y * 0.5f);
 
         }
 
         if (playerRb.velocity.y < -0.1f)
         {
-            anim.SetFloat("Movement", playerRb.velocity.y);
-            playerRb.AddForce(Physics2D.gravity * playerRb.gravityScale * playerRb.mass);
+
+            playerRb.gravityScale = gravityFalling;
+
+            anim.SetBool("Fall", true);
+
+
+            //playerRb.AddForce(Physics2D.gravity * playerRb.gravityScale * playerRb.mass);
+        }
+        else
+        {
+            playerRb.gravityScale = gravityNormal;
+            anim.SetBool("Fall", false);
+
         }
 
-        if (playerRb.velocity.y != 0)
+        if (playerRb.velocity.y > .1f)
         {
             states = States1.jump;
             anim.SetBool("Jump", true);
         }
 
-        else if (playerRb.velocity.y == 0 && playerRb.velocity.x == 0)
+        else
         {
             states = States1.idle;
             anim.SetBool("Jump", false);
-            anim.SetBool("Fall", false);
+
         }
-    }*/
+
+    }
 
     private void OnDrawGizmos()
     {
@@ -194,7 +217,7 @@ public class TestMovement2D : MonoBehaviour
     private void Update()
     {
         Movement();
-        //Jump();
+        Jump();
         GroundCheck();
     }
 }
