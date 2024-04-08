@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,10 +23,14 @@ public class Movement2D : MonoBehaviour, IPushable
     [SerializeField] bool isGrounded, isDoubleJump;
     [SerializeField] bool block = false;
     [SerializeField] bool jump = false;
+    //New jump variables
+    [SerializeField] private float jumpHeight = 1;
+    [SerializeField] private float jumpDuration = 1;
 
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] CapsuleCollider2D capsuleCollider;
-
+    [SerializeField] TMP_Text Knockbacktracker;
+    [SerializeField] int tracker;
     [SerializeField] public Animator anim;
     private Vector2 movementInput = Vector2.zero;
 
@@ -50,11 +55,12 @@ public class Movement2D : MonoBehaviour, IPushable
         numberOfHits++;
         playerRb.AddForce(numberOfHits * direction);
         stunned = true;
+        tracker = numberOfHits;
+        Knockbacktracker.text = tracker.ToString();
     }
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
 
@@ -171,13 +177,8 @@ public class Movement2D : MonoBehaviour, IPushable
 
     public void Jump()
     {
-        if (jump)
-        {
-            if (isGrounded)
-            {
-                playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            }
-        }
+        
+        float g = -2 * jumpHeight / (jumpDuration * jumpDuration);
 
         /*if (Input.GetButtonUp(jumpInput) && playerRb.velocity.y > 0)
         {
@@ -188,8 +189,22 @@ public class Movement2D : MonoBehaviour, IPushable
         if (playerRb.velocity.y < -0.1f)
         {
             anim.SetFloat("Movement", playerRb.velocity.y);
-            playerRb.AddForce(Physics2D.gravity * playerRb.gravityScale * playerRb.mass);
+            //playerRb.AddForce(Physics2D.gravity * playerRb.gravityScale * playerRb.mass);
+            g *= 2;
 
+        }
+
+        float v = -g * jumpDuration;
+
+        Physics2D.gravity = new Vector2(0, g);
+
+        if (jump)
+        {
+            if (isGrounded)
+            {
+                //playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().velocity = Vector2.up * v;
+            }
         }
 
         if (playerRb.velocity.y != 0)
