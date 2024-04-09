@@ -2589,6 +2589,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6651321298853132528, guid: 66858c414ec6c73439b45ed40e17d403, type: 3}
+      propertyPath: m_TagString
+      value: Border
+      objectReference: {fileID: 0}
     - target: {fileID: 6754801449841203220, guid: 66858c414ec6c73439b45ed40e17d403, type: 3}
       propertyPath: m_SortingOrder
       value: 0
