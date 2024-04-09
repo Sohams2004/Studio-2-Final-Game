@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class TestAttack : MonoBehaviour
 {
-    [SerializeField] float attackRange;
+    [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
-    [SerializeField] Transform attackPos;
-    [SerializeField] LayerMask opponentLayer;
+    [SerializeField] protected Transform attackPos;
+    [SerializeField] protected LayerMask opponentLayer;
 
     public string attackInput;
     public string crouchInput;
     public Collider2D[] target;
-    GameObject attackedObject;
-    TestMovement2D testMovement2D;
+    protected GameObject attackedObject;
+    protected TestMovement2D testMovement2D;
     KnockBackObject knockBackObject;
 
     private void Start()
@@ -21,7 +21,7 @@ public class TestAttack : MonoBehaviour
         attackInput = $"Fire1_P{testMovement2D.OwnId}";
     }
 
-    void PlayerAttack()
+    public virtual void PlayerAttack()
     {
         if (Input.GetButtonDown(attackInput))
         {
