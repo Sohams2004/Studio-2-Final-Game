@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3640055675057126928}
   - component: {fileID: 6715768655779909222}
-  - component: {fileID: 3489845981658988436}
   - component: {fileID: 234903426609507088}
-  - component: {fileID: 3464976916776550335}
   - component: {fileID: 6015142012561501067}
   - component: {fileID: 4936860924761323058}
   - component: {fileID: 4422566244735620485}
+  - component: {fileID: 9109580740797333942}
+  - component: {fileID: 8331357773962993675}
+  - component: {fileID: 931891587816625056}
   m_Layer: 6
   m_Name: Kusaru
   m_TagString: Player 1
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: -4
   m_Sprite: {fileID: -156042681, guid: 4be8b4462dc64c1488fd113635aba62d, type: 3}
-  m_Color: {r: 0.9811321, g: 0.627451, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 0.84339625, b: 0.84339625, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -91,39 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3489845981658988436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2166295250138462442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00aaf6b2eee8bc4b9039b3a419a5a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players: 0
-  states: 0
-  movementSpeed: 10
-  facingDirection: 0
-  isGrounded: 0
-  isDoubleJump: 0
-  block: 0
-  jump: 0
-  jumpHeight: 1
-  jumpDuration: 1
-  playerRb: {fileID: 0}
-  capsuleCollider: {fileID: 0}
-  Knockbacktracker: {fileID: 0}
-  tracker: 0
-  anim: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  rayLength: 5
-  jumpForce: 0.4
-  playerInput: {fileID: 0}
 --- !u!114 &234903426609507088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +119,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3489845981658988436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -167,7 +135,7 @@ MonoBehaviour:
     m_ActionName: Ingame/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualShock4GamepadHID/leftStick,/DualShock4GamepadHID1/leftStick]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3489845981658988436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -183,7 +151,7 @@ MonoBehaviour:
     m_ActionName: Ingame/Jump[/Keyboard/space,/DualShock4GamepadHID/buttonSouth,/DualShock4GamepadHID1/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3489845981658988436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
         m_MethodName: OnBlock
         m_Mode: 0
@@ -199,9 +167,9 @@ MonoBehaviour:
     m_ActionName: Ingame/Block[/DualShock4GamepadHID1/leftShoulder]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3464976916776550335}
+      - m_Target: {fileID: 2166295250138462442}
         m_TargetAssemblyTypeName: Attack, Assembly-CSharp
-        m_MethodName: OnAttack1
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -218,26 +186,6 @@ MonoBehaviour:
   m_DefaultActionMap: Ingame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &3464976916776550335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2166295250138462442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d579a08624d0940b0e3a83a2217f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 0.88
-  repulseForce: 14.6
-  attackPos: {fileID: 4037217564490703751}
-  opponentLayer:
-    serializedVersion: 2
-    m_Bits: 192
-  direction: 0
-  playerInput: {fileID: 234903426609507088}
 --- !u!70 &6015142012561501067
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -286,7 +234,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 481ffb5cf94141342bc25585566ac3dd, type: 2}
@@ -321,6 +269,80 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9109580740797333942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166295250138462442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae94cede4788574787aa966d24cdaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 0.36
+  repulseForce: 5
+  attackPos: {fileID: 4037217564490703751}
+  opponentLayer:
+    serializedVersion: 2
+    m_Bits: 192
+  attackInput: Fire1_P0
+  crouchInput: 
+  target: []
+--- !u!114 &8331357773962993675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166295250138462442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee268ae801cf3447956d7f7ce80f817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityNormal: 1
+  gravityFalling: 5
+  players: 0
+  states: 0
+  movementSpeed: 13
+  facingDirection: -1
+  rayLength: 1.2
+  jumpForce: 8
+  horizontalInput: 
+  jumpInput: 
+  isGrounded: 0
+  isDoubleJump: 0
+  playerRb: {fileID: 0}
+  capsuleCollider: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  playerInput: {fileID: 0}
+  anim: {fileID: 0}
+  maxSpeed: 50
+--- !u!114 &931891587816625056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166295250138462442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae94cede4788574787aa966d24cdaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 5
+  repulseForce: 5
+  attackPos: {fileID: 4037217564490703751}
+  opponentLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  attackInput: 
+  crouchInput: 
+  target: []
 --- !u!1 &4516542421920244874
 GameObject:
   m_ObjectHideFlags: 0

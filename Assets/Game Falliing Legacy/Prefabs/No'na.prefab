@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 8408614453583843427}
   - component: {fileID: 719114837124204600}
   - component: {fileID: 2052789574039037273}
-  - component: {fileID: 1217274012967959535}
-  - component: {fileID: 723463167754141662}
+  - component: {fileID: 2363194775662529431}
+  - component: {fileID: 4366282791249562821}
   m_Layer: 6
   m_Name: No'na
   m_TagString: Player 3
@@ -190,10 +190,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 7
-  m_LinearDrag: 0
+  m_Mass: 1
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
-  m_GravityScale: 0.989
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -204,7 +204,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2052789574039037273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 723463167754141662}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
     m_ActionName: Ingame/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualShock4GamepadHID/leftStick]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 723463167754141662}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
     m_ActionName: Ingame/Jump[/Keyboard/space,/DualShock4GamepadHID/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 723463167754141662}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
         m_MethodName: OnBlock
         m_Mode: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
     m_ActionName: Ingame/Block[/DualShock4GamepadHID/leftShoulder]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1217274012967959535}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Attack, Assembly-CSharp
         m_MethodName: OnAttack1
         m_Mode: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_DefaultActionMap: Ingame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1217274012967959535
+--- !u!114 &2363194775662529431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,18 +308,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5203342141680156892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d579a08624d0940b0e3a83a2217f35, type: 3}
+  m_Script: {fileID: 11500000, guid: eae94cede4788574787aa966d24cdaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 0
-  repulseForce: 0
+  attackRange: 0.36
+  repulseForce: 5
   attackPos: {fileID: 4130714761710819659}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 192
-  direction: 0
-  playerInput: {fileID: 2052789574039037273}
---- !u!114 &723463167754141662
+  attackInput: 
+  crouchInput: 
+  target: []
+--- !u!114 &4366282791249562821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,25 +329,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 5203342141680156892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00aaf6b2eee8bc4b9039b3a419a5a6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ee268ae801cf3447956d7f7ce80f817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityNormal: 1
+  gravityFalling: 5
   players: 0
   states: 0
-  movementSpeed: 0
-  facingDirection: 0
+  movementSpeed: 15
+  facingDirection: -1
+  rayLength: 1.2
+  jumpForce: 8
+  horizontalInput: 
+  jumpInput: 
   isGrounded: 0
   isDoubleJump: 0
-  block: 0
-  jump: 0
-  playerRb: {fileID: 719114837124204600}
-  capsuleCollider: {fileID: 8408614453583843427}
-  Knockbacktracker: {fileID: 0}
-  tracker: 0
-  anim: {fileID: 333074932351180323}
+  playerRb: {fileID: 0}
+  capsuleCollider: {fileID: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 72
-  rayLength: 0
-  jumpForce: 0
-  playerInput: {fileID: 2052789574039037273}
+    m_Bits: 8
+  playerInput: {fileID: 0}
+  anim: {fileID: 0}
+  maxSpeed: 50
