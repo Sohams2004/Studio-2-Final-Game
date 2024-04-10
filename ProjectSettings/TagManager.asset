@@ -9,7 +9,6 @@ TagManager:
   - Player 2
   - Border
   - Extend Ability
-  - Player 3
   layers:
   - Default
   - TransparentFX
