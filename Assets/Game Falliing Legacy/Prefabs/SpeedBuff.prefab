@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2751870450114375499}
   - component: {fileID: 5630057226013642198}
   - component: {fileID: 2262123815695762800}
+  - component: {fileID: 1719304438948631536}
   m_Layer: 0
   m_Name: SpeedBuff
   m_TagString: Untagged
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 5.17, y: 5.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2262123815695762800
@@ -99,3 +100,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedIncreaseAmount: 5
   jumpIncreaseAmount: 5
+--- !u!114 &1719304438948631536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901472536388273970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b14c46d4bc56945b23e9b3f26f95ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpSound: {fileID: 8300000, guid: 3a6a37c035ada7941bf599e856cb5de4, type: 3}
