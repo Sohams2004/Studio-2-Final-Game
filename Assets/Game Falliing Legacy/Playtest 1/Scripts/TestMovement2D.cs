@@ -82,7 +82,7 @@ public class TestMovement2D : MonoBehaviour
         string horizontalAxis = $"Horizontal_P{playerInput.playerIndex + 1}";
         string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
         string crouchAxis = $"Crouch_P{playerInput.playerIndex + 1}";
-        testAttack.attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
+        //testAttack.attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
         ownId = playerInput.playerIndex + 1;
 
 
