@@ -236,8 +236,8 @@ MonoBehaviour:
   facingDirection: 0
   rayLength: 1.2
   jumpForce: 8
-  horizontalInput: 
-  jumpInput: 
+  horizontalInput: Horizontal_P1
+  jumpInput: Jump_P1
   isGrounded: 0
   isDoubleJump: 0
   playerRb: {fileID: 0}
@@ -266,7 +266,7 @@ MonoBehaviour:
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
-  attackInput: 
+  attackInput: Fire1_P1
   crouchInput: 
   target: []
 --- !u!70 &4003814520141085228

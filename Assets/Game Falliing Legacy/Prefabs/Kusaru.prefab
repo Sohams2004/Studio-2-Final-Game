@@ -287,7 +287,7 @@ MonoBehaviour:
   opponentLayer:
     serializedVersion: 2
     m_Bits: 192
-  attackInput: Fire1_P0
+  attackInput: Fire1_P1
   crouchInput: 
   target: []
 --- !u!114 &8331357773962993675
@@ -310,8 +310,8 @@ MonoBehaviour:
   facingDirection: -1
   rayLength: 1.2
   jumpForce: 8
-  horizontalInput: 
-  jumpInput: 
+  horizontalInput: Horizontal_P1
+  jumpInput: Jump_P1
   isGrounded: 0
   isDoubleJump: 0
   playerRb: {fileID: 0}
