@@ -7,6 +7,7 @@ public class FighterCamController : MonoBehaviour
     [SerializeField] private float maxZoom = 15f;
     [SerializeField] private float zoomSpeed = 5f;
     [SerializeField] private float followSpeed = 5f;
+    Vector3 centerPoint;
 
     private Camera cam;
 
@@ -17,11 +18,12 @@ public class FighterCamController : MonoBehaviour
         player1 = GameObject.FindWithTag("Player 1").GetComponent<Transform>();
 
         player2 = GameObject.FindWithTag("Player 2").GetComponent<Transform>();
+
+        centerPoint = (player1.position + player2.position) / 2f;
     }
 
     void LateUpdate()
     {
-        Vector3 centerPoint = (player1.position + player2.position) / 2f;
         centerPoint.z = transform.position.z;
 
         transform.position = Vector3.Lerp(transform.position, centerPoint, followSpeed * Time.deltaTime);
@@ -30,5 +32,17 @@ public class FighterCamController : MonoBehaviour
 
         float targetZoom = Mathf.Lerp(minZoom, maxZoom, distance / 10f);
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, zoomSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (player1.CompareTag("Border"))
+        {
+            centerPoint = Vector3.Lerp(centerPoint, player1.position, followSpeed * Time.deltaTime);
+        }
+        if (player2.CompareTag("Border"))
+        {
+            centerPoint = Vector3.Lerp(centerPoint, player2.position, followSpeed * Time.deltaTime);
+        }
     }
 }
