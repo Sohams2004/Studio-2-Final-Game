@@ -260,13 +260,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae94cede4788574787aa966d24cdaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 0.36
+  attackRange: 1.06
   repulseForce: 6.7
+  blockTime: 0
   attackPos: {fileID: 3569616790400125934}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
   attackInput: Fire1_P1
+  blockInput: Block_P2
   crouchInput: 
   target: []
 --- !u!70 &4003814520141085228

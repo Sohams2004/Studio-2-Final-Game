@@ -4,21 +4,22 @@ public class TestAttack : MonoBehaviour
 {
     [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
+    [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] protected Transform attackPos;
     [SerializeField] protected LayerMask opponentLayer;
 
-    public string attackInput;
+    public string attackInput, blockInput;
     public string crouchInput;
+    public bool isBlocking;
     public Collider2D[] target;
     protected GameObject attackedObject;
     protected TestMovement2D testMovement2D;
-    KnockBackObject knockBackObject;
 
     private void Start()
     {
         testMovement2D = GetComponent<TestMovement2D>();
 
-        attackInput = $"Fire1_P{testMovement2D.OwnId}";
+        //attackInput = $"Fire1_P{testMovement2D.OwnId + 1}";
     }
 
     public virtual void PlayerAttack()
@@ -50,6 +51,40 @@ public class TestAttack : MonoBehaviour
         }
     }
 
+    void Block() //3 or more attacks can break the block
+    {
+        if (Input.GetButton(blockInput))
+        {
+            Debug.Log("Blocked");
+
+            blockTime += Time.deltaTime;
+            if (blockTime <= 3)
+            {
+                //int layerMask = LayerMask.GetMask("Default");
+                //gameObject.layer = layerMask;
+                testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
+
+            if (blockTime > 3)
+            {
+                //int layerMask = LayerMask.GetMask("Opponent");
+                //gameObject.layer = layerMask;
+                testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
+                testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                blockTime = 0;
+            }
+        }
+
+        if (Input.GetButtonUp(blockInput))
+        {
+            //int layerMask = LayerMask.GetMask("Opponent");
+            //gameObject.layer = layerMask;
+            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
+            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            blockTime = 0;
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
@@ -58,5 +93,6 @@ public class TestAttack : MonoBehaviour
     private void Update()
     {
         PlayerAttack();
+        Block();
     }
 }

@@ -283,11 +283,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 0.36
   repulseForce: 5
+  blockTime: 0
   attackPos: {fileID: 4037217564490703751}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 192
   attackInput: Fire1_P2
+  blockInput: Block_P2
   crouchInput: 
   target: []
 --- !u!114 &8331357773962993675
@@ -336,11 +338,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 5
   repulseForce: 5
+  blockTime: 0
   attackPos: {fileID: 4037217564490703751}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 64
   attackInput: 
+  blockInput: 
   crouchInput: 
   target: []
 --- !u!1 &4516542421920244874
