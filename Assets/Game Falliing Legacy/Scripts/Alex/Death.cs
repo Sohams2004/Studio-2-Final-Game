@@ -2,12 +2,14 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Death : MonoBehaviour
+public class Death : MatchManager
 {
     [SerializeField] Animator animator1;
     [SerializeField] Animator animator2;
     bool stillin1 = false;
     bool stillin2 = false;
+    public int player1Lives = 5;
+    public int player2Lives = 5;
 
     async private void OnTriggerStay2D(Collider2D other)
     {
@@ -21,6 +23,8 @@ public class Death : MonoBehaviour
                 animator1.SetBool("Death", true);
                 await Task.Delay(1000);
                 Destroy(other.gameObject);
+                player1Lives--;
+                WinCondition();
                 SceneManager.LoadScene(1);
             }
 
@@ -36,6 +40,8 @@ public class Death : MonoBehaviour
                 animator2.SetBool("Death", true);
                 await Task.Delay(1000);
                 Destroy(other.gameObject);
+                player2Lives--;
+                WinCondition();
                 SceneManager.LoadScene(1);
             }
 
