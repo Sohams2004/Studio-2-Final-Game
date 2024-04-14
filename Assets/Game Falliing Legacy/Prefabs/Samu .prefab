@@ -234,7 +234,7 @@ MonoBehaviour:
   states: 0
   movementSpeed: 80
   facingDirection: 0
-  rayLength: 3.5
+  rayLength: 3.54
   jumpForce: 200
   horizontalInput: Horizontal_P1
   jumpInput: Jump_P1
@@ -242,6 +242,7 @@ MonoBehaviour:
   isDoubleJump: 0
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  stunned: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -268,11 +269,14 @@ MonoBehaviour:
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
+  Knockbacktracker: {fileID: 0}
+  tracker: 0
   attackInput: Fire1_P2
   blockInput: Block_P2
   crouchInput: 
   isBlocking: 0
-  target: []
+  target:
+  - {fileID: 0}
 --- !u!70 &4003814520141085228
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
