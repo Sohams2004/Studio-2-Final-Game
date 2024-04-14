@@ -1,29 +1,34 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject SpawnPrefab;
-    public float delay = 30f;
+    [SerializeField] List<Transform> spawnPoints = new List<Transform>();
+    [SerializeField] List<GameObject> abilities = new List<GameObject>();
+    public float delay = 5f;
 
     private float timer = 0f;
     private bool hasSpawned = false;
 
     void Update()
     {
-
         timer += Time.deltaTime;
 
 
-        if (timer >= delay && !hasSpawned)
+        if (timer >= delay)
         {
             SpawningPrefab();
-            hasSpawned = true;
         }
     }
 
     void SpawningPrefab()
     {
+        int randomSpawnPoint = Random.Range(0, spawnPoints.Count);
+        int randomAbility = Random.Range(0, abilities.Count);
 
-        Instantiate(SpawnPrefab, transform.position, Quaternion.identity);
+        Transform spawnLocation = spawnPoints[randomSpawnPoint];
+        GameObject spawnAbility = abilities[randomAbility];
+
+        Instantiate(spawnAbility, spawnLocation.position, Quaternion.identity);
     }
 }
