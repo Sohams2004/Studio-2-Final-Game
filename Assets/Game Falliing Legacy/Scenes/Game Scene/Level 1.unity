@@ -668,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2166295250138462442, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3640055675057126928, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -709,6 +709,22 @@ PrefabInstance:
     - target: {fileID: 3640055675057126928, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331357773962993675, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: jumpInput
+      value: Jump_P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331357773962993675, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: horizontalInput
+      value: Horizontal_P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109580740797333942, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: blockInput
+      value: Block_P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109580740797333942, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: attackInput
+      value: Fire1_P2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1806,13 +1822,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2891205510442028559, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
+      propertyPath: blockInput
+      value: Block_P1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891205510442028559, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
+      propertyPath: attackInput
+      value: Fire1_P1
+      objectReference: {fileID: 0}
     - target: {fileID: 4728511811440799742, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
       propertyPath: m_Name
       value: 'Samu '
       objectReference: {fileID: 0}
     - target: {fileID: 4728511811440799742, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5616700081451960126, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
       propertyPath: rayLength
