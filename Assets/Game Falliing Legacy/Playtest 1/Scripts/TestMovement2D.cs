@@ -171,9 +171,16 @@ public class TestMovement2D : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp(jumpInput) && playerRb.velocity.y > 0)
+        if (playerRb.velocity.y > .1f)
         {
-            //playerRb.velocity = new Vector2(playerRb.velocity.x, playerRb.velocity.y * 0.5f);
+            states = States1.jump;
+            anim.SetBool("Jump", true);
+        }
+        else
+        {
+            states = States1.idle;
+
+            anim.SetBool("Jump", false);
 
         }
 
@@ -181,7 +188,6 @@ public class TestMovement2D : MonoBehaviour
         {
 
             playerRb.gravityScale = gravityFalling;
-
             anim.SetBool("Fall", true);
 
 
@@ -194,18 +200,8 @@ public class TestMovement2D : MonoBehaviour
 
         }
 
-        if (playerRb.velocity.y > .1f)
-        {
-            states = States1.jump;
-            anim.SetBool("Jump", true);
-        }
 
-        else
-        {
-            states = States1.idle;
-            anim.SetBool("Jump", false);
 
-        }
 
     }
 

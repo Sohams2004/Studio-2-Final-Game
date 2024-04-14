@@ -22,7 +22,7 @@ public class FighterCamController : MonoBehaviour
         centerPoint = (player1.position + player2.position) / 2f;
     }
 
-    void LateUpdate()
+    void Update()
     {
         centerPoint.z = transform.position.z;
 
