@@ -41387,6 +41387,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2166295250138462442, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3640055675057126928, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.2
@@ -56520,6 +56524,10 @@ PrefabInstance:
     - target: {fileID: 4728511811440799742, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
       propertyPath: m_Name
       value: 'Samu '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728511811440799742, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5616700081451960126, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
       propertyPath: rayLength
