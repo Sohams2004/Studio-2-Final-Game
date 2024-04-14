@@ -1,12 +1,18 @@
+using TMPro;
 using UnityEngine;
 
-public class TestAttack : MonoBehaviour
+public class TestAttack : MonoBehaviour, IPushable
 {
+
     [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
     [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] protected Transform attackPos;
     [SerializeField] protected LayerMask opponentLayer;
+
+    [SerializeField] TMP_Text Knockbacktracker;
+
+    [SerializeField] float tracker;
 
     public string attackInput, blockInput;
     public string crouchInput;
@@ -50,7 +56,14 @@ public class TestAttack : MonoBehaviour
             testMovement2D.anim.SetBool("Attack 1", false);
         }
     }
-
+    public void Push(Vector2 direction)
+    {
+        repulseForce++;
+        testMovement2D.playerRb.AddForce(repulseForce * direction);
+        testMovement2D.stunned = true;
+        tracker = repulseForce;
+        Knockbacktracker.text = tracker.ToString();
+    }
     void Block() //3 or more attacks can break the block
     {
         if (Input.GetButton(blockInput))
