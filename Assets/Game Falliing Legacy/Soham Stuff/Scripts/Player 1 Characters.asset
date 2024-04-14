@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bb60a2bd3d6a94cbe351cd575f0aa4, type: 3}
+  m_Name: Player 1 Characters
+  m_EditorClassIdentifier: 
+  data:
+  - name: Samu
+    playerPrefab: {fileID: 4728511811440799742, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
+  - name: Kusaru
+    playerPrefab: {fileID: 2166295250138462442, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+  - name: Abdul Raman
+    playerPrefab: {fileID: 2745589951522982384, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+  - name: No'na
+    playerPrefab: {fileID: 5203342141680156892, guid: 86af6c47bdcca0042a4c7a8a44f6df43, type: 3}
