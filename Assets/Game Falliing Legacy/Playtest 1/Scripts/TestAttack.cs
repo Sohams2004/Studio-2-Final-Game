@@ -73,6 +73,7 @@ public class TestAttack : MonoBehaviour
                 testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 blockTime = 0;
             }
+            testMovement2D.anim.SetBool("Block", true);
         }
 
         if (Input.GetButtonUp(blockInput))
@@ -82,6 +83,7 @@ public class TestAttack : MonoBehaviour
             testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
             testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
             blockTime = 0;
+            testMovement2D.anim.SetBool("Block", false);
         }
     }
 
