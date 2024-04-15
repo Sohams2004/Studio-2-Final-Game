@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game Falliing Legacy/Scenes/Game Scene/Level 2.unity
     guid: fb0a5388e78a82647b2a6b71433cd6c9
+  - enabled: 1
+    path: Assets/Game Falliing Legacy/Scenes/Game Scene/Level 3.unity
+    guid: 4fe97b5e16d0a334baace6a144739dcd
+  - enabled: 1
+    path: Assets/Game Falliing Legacy/Scenes/Game Scene/Level 4.unity
+    guid: 67060fb175cb4a346a6037c03209b0d7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a0724eac58379794e97a5f3893260a65, type: 2}

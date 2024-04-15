@@ -25,6 +25,9 @@ public class TestMovement2D : MonoBehaviour
     [SerializeField] public Rigidbody2D playerRb;
     [SerializeField] public CapsuleCollider2D capsuleCollider;
 
+    public bool stunned;
+    int numberOfHits = 0;
+
     RaycastHit2D groundHit;
 
     [SerializeField] LayerMask groundLayer;
@@ -77,12 +80,14 @@ public class TestMovement2D : MonoBehaviour
         SetInput();
     }
 
+
+
     private void SetInput()
     {
         string horizontalAxis = $"Horizontal_P{playerInput.playerIndex + 1}";
         string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
         string crouchAxis = $"Crouch_P{playerInput.playerIndex + 1}";
-        //testAttack.attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
+        string attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
         ownId = playerInput.playerIndex + 1;
 
 
@@ -171,9 +176,16 @@ public class TestMovement2D : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp(jumpInput) && playerRb.velocity.y > 0)
+        if (playerRb.velocity.y > .1f)
         {
-            //playerRb.velocity = new Vector2(playerRb.velocity.x, playerRb.velocity.y * 0.5f);
+            states = States1.jump;
+            anim.SetBool("Jump", true);
+        }
+        else
+        {
+            states = States1.idle;
+
+            anim.SetBool("Jump", false);
 
         }
 
@@ -181,7 +193,6 @@ public class TestMovement2D : MonoBehaviour
         {
 
             playerRb.gravityScale = gravityFalling;
-
             anim.SetBool("Fall", true);
 
 
@@ -194,18 +205,8 @@ public class TestMovement2D : MonoBehaviour
 
         }
 
-        if (playerRb.velocity.y > .1f)
-        {
-            states = States1.jump;
-            anim.SetBool("Jump", true);
-        }
 
-        else
-        {
-            states = States1.idle;
-            anim.SetBool("Jump", false);
 
-        }
 
     }
 

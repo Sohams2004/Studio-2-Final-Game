@@ -228,26 +228,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee268ae801cf3447956d7f7ce80f817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityNormal: 1
-  gravityFalling: 5
+  gravityNormal: 2
+  gravityFalling: 45
   players: 0
   states: 0
-  movementSpeed: 15
+  movementSpeed: 80
   facingDirection: 0
-  rayLength: 1.2
-  jumpForce: 8
+  rayLength: 3.54
+  jumpForce: 200
   horizontalInput: Horizontal_P1
   jumpInput: Jump_P1
   isGrounded: 0
   isDoubleJump: 0
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  stunned: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   playerInput: {fileID: 0}
   anim: {fileID: 0}
-  maxSpeed: 50
+  maxSpeed: 80
 --- !u!114 &2891205510442028559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,14 +264,19 @@ MonoBehaviour:
   attackRange: 1.06
   repulseForce: 6.7
   blockTime: 0
+  blockPauseTimer: 0
   attackPos: {fileID: 3569616790400125934}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
-  attackInput: Fire1_P1
+  Knockbacktracker: {fileID: 0}
+  tracker: 0
+  attackInput: Fire1_P2
   blockInput: Block_P2
   crouchInput: 
-  target: []
+  isBlocking: 0
+  target:
+  - {fileID: 0}
 --- !u!70 &4003814520141085228
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -318,10 +324,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_Mass: 5
+  m_LinearDrag: 2
+  m_AngularDrag: 0.5
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: 481ffb5cf94141342bc25585566ac3dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
