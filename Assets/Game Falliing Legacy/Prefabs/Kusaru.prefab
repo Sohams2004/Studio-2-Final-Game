@@ -288,11 +288,14 @@ MonoBehaviour:
   opponentLayer:
     serializedVersion: 2
     m_Bits: 192
+  Knockbacktracker: {fileID: 0}
+  tracker: 0
   attackInput: Fire1_P1
   blockInput: Block_P1
   crouchInput: 
   isBlocking: 0
-  target: []
+  target:
+  - {fileID: 0}
 --- !u!114 &8331357773962993675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +322,7 @@ MonoBehaviour:
   isDoubleJump: 0
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  stunned: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8

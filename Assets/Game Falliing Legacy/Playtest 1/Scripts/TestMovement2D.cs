@@ -1,8 +1,7 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TestMovement2D : MonoBehaviour, IPushable
+public class TestMovement2D : MonoBehaviour
 {
     public enum Players
     {
@@ -25,9 +24,8 @@ public class TestMovement2D : MonoBehaviour, IPushable
 
     [SerializeField] public Rigidbody2D playerRb;
     [SerializeField] public CapsuleCollider2D capsuleCollider;
-    [SerializeField] TMP_Text Knockbacktracker;
-    private bool stunned;
-    [SerializeField] int tracker;
+
+    public bool stunned;
     int numberOfHits = 0;
 
     RaycastHit2D groundHit;
@@ -82,21 +80,14 @@ public class TestMovement2D : MonoBehaviour, IPushable
         SetInput();
     }
 
-    public void Push(Vector2 direction)
-    {
-        numberOfHits++;
-        playerRb.AddForce(numberOfHits * direction);
-        stunned = true;
-        tracker = numberOfHits;
-        Knockbacktracker.text = tracker.ToString();
-    }
+
 
     private void SetInput()
     {
         string horizontalAxis = $"Horizontal_P{playerInput.playerIndex + 1}";
         string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
         string crouchAxis = $"Crouch_P{playerInput.playerIndex + 1}";
-        //testAttack.attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
+        string attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
         ownId = playerInput.playerIndex + 1;
 
 
