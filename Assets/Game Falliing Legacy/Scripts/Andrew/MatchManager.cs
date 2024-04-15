@@ -31,11 +31,13 @@ public class MatchManager : MonoBehaviour
         if (p1Lives.player1Lives <= 0)
         {
             p1WinUI.SetActive(true);
+            Time.timeScale = 0;
         }
 
         if (p2Lives.player2Lives <= 0)
         {
             p2WinUI.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
