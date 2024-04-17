@@ -24,13 +24,25 @@ public class FighterCamController : MonoBehaviour
 
     void Update()
     {
-            centerPoint.z = transform.position.z;
+        centerPoint.z = transform.position.z;
 
-            transform.position = Vector3.Lerp(transform.position, centerPoint, followSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, centerPoint, followSpeed * Time.deltaTime);
 
-            float distance = Vector3.Distance(player1.position, player2.position);
+        float distance = Vector3.Distance(player1.position, player2.position);
 
-            float targetZoom = Mathf.Lerp(minZoom, maxZoom, distance / 10f);
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, zoomSpeed * Time.deltaTime);
+        float targetZoom = Mathf.Lerp(minZoom, maxZoom, distance / 10f);
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, zoomSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (player1.CompareTag("Border"))
+        {
+            centerPoint = Vector3.Lerp(centerPoint, player1.position, followSpeed * Time.deltaTime);
+        }
+        if (player2.CompareTag("Border"))
+        {
+            centerPoint = Vector3.Lerp(centerPoint, player2.position, followSpeed * Time.deltaTime);
+        }
     }
 }
