@@ -228,26 +228,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee268ae801cf3447956d7f7ce80f817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityNormal: 1
-  gravityFalling: 5
-  players: 0
+  gravityNormal: 2
+  gravityFalling: 45
+  players: 1
   states: 0
-  movementSpeed: 15
+  movementSpeed: 25
   facingDirection: 0
-  rayLength: 1.2
-  jumpForce: 8
+  rayLength: 3.58
+  jumpForce: 50
   horizontalInput: Horizontal_P2
   jumpInput: Jump_P2
   isGrounded: 0
   isDoubleJump: 0
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  stunned: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   playerInput: {fileID: 0}
   anim: {fileID: 0}
-  maxSpeed: 50
+  maxSpeed: 80
 --- !u!114 &2891205510442028559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,14 +263,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 1.2
   repulseForce: 6.7
+  knocBackCount: 0
+  knockBackInterval: 0
   blockTime: 0
+  blockPauseTimer: 0
   attackPos: {fileID: 3569616790400125934}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
+  Knockbacktracker: {fileID: 0}
+  tracker: 0
   attackInput: Fire1_P2
   blockInput: Block_P2
   crouchInput: 
+  isBlocking: 0
   target: []
 --- !u!70 &4003814520141085228
 CapsuleCollider2D:
