@@ -61,23 +61,21 @@ public class TestMovement2D : MonoBehaviour
 
         playerInput = GetComponent<PlayerInput>();
 
-        switch (players)
+        /*switch (players)
         {
             case Players.Player1:
                 horizontalInput = "Horizontal_P1";
                 jumpInput = "Jump_P1";
-                testAttack.crouchInput = "Crouch_P1";
-                testAttack.attackInput = "Fire1_P1";
+               
                 break;
 
             case Players.Player2:
                 horizontalInput = "Horizontal_P2";
                 jumpInput = "Jump_P2";
-                testAttack.crouchInput = "Crouch_P2";
-                testAttack.attackInput = "Fire1_P2";
+                
                 break;
-        }
-        SetInput();
+        }*/
+        //SetInput();
     }
 
 
@@ -87,7 +85,7 @@ public class TestMovement2D : MonoBehaviour
         string horizontalAxis = $"Horizontal_P{playerInput.playerIndex + 1}";
         string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
         string crouchAxis = $"Crouch_P{playerInput.playerIndex + 1}";
-        string attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
+        //string attackInput = $"Fire1_P{playerInput.playerIndex + 1}";
         ownId = playerInput.playerIndex + 1;
 
 
