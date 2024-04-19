@@ -6,7 +6,7 @@ public class PowerUpSound : MonoBehaviour
 {
     public AudioClip powerUpSound; 
 
-    private bool triggered = false; 
+    private bool triggered = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -25,8 +25,8 @@ public class PowerUpSound : MonoBehaviour
             }
 
             triggered = true;
-            
-        }
 
+        }
+    }     }
 
 
