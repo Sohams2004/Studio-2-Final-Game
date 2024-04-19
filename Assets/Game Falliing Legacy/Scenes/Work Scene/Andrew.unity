@@ -9645,8 +9645,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7714659026866312421, guid: f07fd1d3f9713a44eabc67eec31b1e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 418120157}
   m_SourcePrefab: {fileID: 100100000, guid: f07fd1d3f9713a44eabc67eec31b1e3d, type: 3}
+--- !u!1 &418120156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7714659026866312421, guid: f07fd1d3f9713a44eabc67eec31b1e3d, type: 3}
+  m_PrefabInstance: {fileID: 418120155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &418120157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418120156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 100
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &420944551
 GameObject:
   m_ObjectHideFlags: 0
@@ -12418,9 +12446,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3638082713104246438, guid: b221aa5193d8ae54d8ca4c5c9d0191cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2138106855}
-    - targetCorrespondingSourceObject: {fileID: 1339075755496346659, guid: b221aa5193d8ae54d8ca4c5c9d0191cc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1133040375}
     - targetCorrespondingSourceObject: {fileID: 490509197896170230, guid: b221aa5193d8ae54d8ca4c5c9d0191cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 729196186}
@@ -12467,11 +12492,6 @@ GameObject:
 --- !u!1 &479506862 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 490509197896170230, guid: b221aa5193d8ae54d8ca4c5c9d0191cc, type: 3}
-  m_PrefabInstance: {fileID: 479506855}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &479506863 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1339075755496346659, guid: b221aa5193d8ae54d8ca4c5c9d0191cc, type: 3}
   m_PrefabInstance: {fileID: 479506855}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &479506864 stripped
@@ -30244,70 +30264,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1133040375
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479506863}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.68, y: 1.15}
-    newSize: {x: 0.68, y: 1.15}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.32, y: -0.375}
-      - {x: 0.25, y: -0.305}
-      - {x: 0.19999999, y: -0.24499999}
-      - {x: 0.11, y: 0.235}
-      - {x: 0.04, y: 0.53499997}
-      - {x: 0.02, y: 0.575}
-      - {x: -0.03, y: 0.575}
-      - {x: -0.06, y: 0.505}
-      - {x: -0.14, y: 0.074999996}
-      - {x: -0.19999999, y: -0.24499999}
-      - {x: -0.26999998, y: -0.315}
-      - {x: -0.34, y: -0.415}
-      - {x: -0.34, y: -0.525}
-      - {x: -0.31, y: -0.565}
-      - {x: -0.26, y: -0.575}
-      - {x: 0.24, y: -0.575}
-      - {x: 0.31, y: -0.555}
-      - {x: 0.34, y: -0.525}
-      - {x: 0.34, y: -0.415}
-  m_UseDelaunayMesh: 0
 --- !u!1 &1138433127
 GameObject:
   m_ObjectHideFlags: 0

@@ -232,10 +232,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 2
+  m_Mass: 1
+  m_LinearDrag: 1
   m_AngularDrag: 0.5
-  m_GravityScale: 5
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 481ffb5cf94141342bc25585566ac3dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -282,6 +282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 1.47
   repulseForce: 5
+  knocBackCount: 0
+  knockBackInterval: 0
   blockTime: 0
   blockPauseTimer: 0
   attackPos: {fileID: 4037217564490703751}
@@ -312,10 +314,10 @@ MonoBehaviour:
   gravityFalling: 45
   players: 0
   states: 0
-  movementSpeed: 80
-  facingDirection: -1
-  rayLength: 3.5
-  jumpForce: 200
+  movementSpeed: 25
+  facingDirection: 0
+  rayLength: 3.58
+  jumpForce: 50
   horizontalInput: Horizontal_P1
   jumpInput: Jump_P1
   isGrounded: 0

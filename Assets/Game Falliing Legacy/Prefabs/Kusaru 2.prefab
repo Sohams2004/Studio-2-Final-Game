@@ -283,14 +283,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 0.36
   repulseForce: 5
+  knocBackCount: 0
+  knockBackInterval: 0
   blockTime: 0
+  blockPauseTimer: 0
   attackPos: {fileID: 4037217564490703751}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 192
+  Knockbacktracker: {fileID: 0}
+  tracker: 0
   attackInput: Fire1_P2
   blockInput: Block_P2
   crouchInput: 
+  isBlocking: 0
   target: []
 --- !u!114 &8331357773962993675
 MonoBehaviour:
@@ -318,6 +324,7 @@ MonoBehaviour:
   isDoubleJump: 0
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  stunned: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -338,14 +345,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 5
   repulseForce: 5
+  knocBackCount: 0
+  knockBackInterval: 0
   blockTime: 0
+  blockPauseTimer: 0
   attackPos: {fileID: 4037217564490703751}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 64
-  attackInput: 
-  blockInput: 
+  Knockbacktracker: {fileID: 0}
+  tracker: 0
+  attackInput: Fire1_P2
+  blockInput: Block_P2
   crouchInput: 
+  isBlocking: 0
   target: []
 --- !u!1 &4516542421920244874
 GameObject:

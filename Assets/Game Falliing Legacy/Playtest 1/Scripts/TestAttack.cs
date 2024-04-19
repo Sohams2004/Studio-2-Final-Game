@@ -6,6 +6,8 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
+    [SerializeField] int knocBackCount;
+    [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] protected Transform attackPos;
     [SerializeField] protected LayerMask opponentLayer;
@@ -40,9 +42,9 @@ public class TestAttack : MonoBehaviour, IPushable
             {
                 Debug.Log(i + " " + target[i].name);
                 attackedObject = target[i].gameObject;
-                //target[i].attachedRigidbody.velocity = Vector3.zero;
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
+                KnockBackTrack();
                 //target[i].attachedRigidbody.velocity = new Vector2(testMovement2D.facingDirection, 0) * repulseForce;
                 /*knockBackObject = gameObject.GetComponent<KnockBackObject>();
                 if (knockBackObject is not null)
@@ -97,6 +99,22 @@ public class TestAttack : MonoBehaviour, IPushable
             testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
             blockTime = 0;
             testMovement2D.anim.SetBool("Block", false);
+        }
+    }
+
+    void KnockBackTrack()
+    {
+        knocBackCount++;
+        Knockbacktracker.text = "" + knocBackCount;
+
+        if (knocBackCount % 2 == 0)
+        {
+            knocBackCount += 5;
+        }
+
+        else if (knocBackCount >= 200f)
+        {
+            knocBackCount = 0;
         }
     }
 

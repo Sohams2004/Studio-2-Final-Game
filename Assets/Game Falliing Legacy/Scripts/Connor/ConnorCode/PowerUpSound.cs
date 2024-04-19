@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpSound : MonoBehaviour
 {
-    public AudioClip powerUpSound; 
+    public AudioClip powerUpSound;
 
     private bool triggered = false;
 
@@ -27,6 +25,8 @@ public class PowerUpSound : MonoBehaviour
             triggered = true;
 
         }
-    }     }
+    }
+}
+
 
 
