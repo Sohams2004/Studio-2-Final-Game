@@ -9,6 +9,10 @@ TagManager:
   - Player 2
   - Border
   - Extend Ability
+  - Player 3
+  - Enemy
+  - Gun
+  - Gun Ability
   layers:
   - Default
   - TransparentFX
