@@ -609,6 +609,67 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &807504709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2745589951522982384, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_Name
+      value: Abdulraman (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279807263916714126, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
 --- !u!1 &815113620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1103,10 @@ PrefabInstance:
     - target: {fileID: 2745589951522982384, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
       propertyPath: m_Name
       value: Abdulraman
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745589951522982384, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5863027435346169029, guid: 72f44383fc4bbee408ece790e5cd9a6f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1605,6 +1670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Samu '
       objectReference: {fileID: 0}
+    - target: {fileID: 4728511811440799742, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5616700081451960126, guid: 5ad96dab86ef3524ca537065f6d3f007, type: 3}
       propertyPath: facingDirection
       value: 0
@@ -1694,3 +1763,4 @@ SceneRoots:
   - {fileID: 2034307357}
   - {fileID: 1374613625}
   - {fileID: 2140848132}
+  - {fileID: 807504709}
