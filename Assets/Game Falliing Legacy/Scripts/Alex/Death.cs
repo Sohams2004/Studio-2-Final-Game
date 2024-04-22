@@ -27,6 +27,10 @@ public class Death : MatchManager
                 WinCondition();
                 SceneManager.LoadScene(1);
             }
+            else if (!stillin1)
+            {
+                stillin1 = false;
+            }
 
 
         }
@@ -44,7 +48,10 @@ public class Death : MatchManager
                 WinCondition();
                 SceneManager.LoadScene(1);
             }
-
+            else if (!stillin2)
+            {
+                stillin2 = false;
+            }
         }
 
     }
