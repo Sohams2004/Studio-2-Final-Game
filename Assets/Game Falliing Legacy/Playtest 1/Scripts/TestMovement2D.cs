@@ -128,7 +128,6 @@ public class TestMovement2D : MonoBehaviour
         {
             states = States1.idle;
             anim.SetBool("Run", false);
-            anim.SetBool("Jump", false);
         }
 
         if (playerRb.velocity.x < -.01f)

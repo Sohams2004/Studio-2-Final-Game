@@ -219,8 +219,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.078363046, y: 0.013301658}
-  m_Size: {x: 0.18177094, y: 0.53635615}
+  m_Offset: {x: 0.07740693, y: 0.0027844906}
+  m_Size: {x: 0.28311804, y: 0.55739045}
   m_Direction: 0
 --- !u!50 &4936860924761323058
 Rigidbody2D:
@@ -237,7 +237,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0.5
-  m_GravityScale: 0.98
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 481ffb5cf94141342bc25585566ac3dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -300,8 +300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1.47
-  repulseForce: 20
-  knocBackCount: 5
+  repulseForce: 5
+  knocBackCount: 0
   knockBackInterval: 0
   blockTime: 0
   blockPauseTimer: 0
@@ -330,13 +330,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityNormal: 2
-  gravityFalling: 60
+  gravityFalling: 45
   players: 0
   states: 0
-  movementSpeed: 10
+  movementSpeed: 25
   facingDirection: 0
   rayLength: 3.58
-  jumpForce: 32
+  jumpForce: 50
   horizontalInput: Horizontal_P1
   jumpInput: Jump_P1
   isGrounded: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  playerInput: {fileID: 234903426609507088}
+  playerInput: {fileID: 0}
   anim: {fileID: 0}
   maxSpeed: 80
 --- !u!1 &4516542421920244874

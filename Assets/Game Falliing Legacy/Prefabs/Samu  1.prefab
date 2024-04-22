@@ -248,13 +248,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityNormal: 2
-  gravityFalling: 60
+  gravityFalling: 45
   players: 1
   states: 0
-  movementSpeed: 10
+  movementSpeed: 25
   facingDirection: 0
   rayLength: 3.58
-  jumpForce: 32
+  jumpForce: 50
   horizontalInput: Horizontal_P2
   jumpInput: Jump_P2
   isGrounded: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  playerInput: {fileID: 6853189255034980085}
+  playerInput: {fileID: 0}
   anim: {fileID: 0}
   maxSpeed: 80
 --- !u!114 &2891205510442028559
@@ -281,8 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1.2
-  repulseForce: 20
-  knocBackCount: 5
+  repulseForce: 6.7
+  knocBackCount: 0
   knockBackInterval: 0
   blockTime: 0
   blockPauseTimer: 0
@@ -346,8 +346,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1
-  m_AngularDrag: 0.5
-  m_GravityScale: 0.98
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 481ffb5cf94141342bc25585566ac3dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
