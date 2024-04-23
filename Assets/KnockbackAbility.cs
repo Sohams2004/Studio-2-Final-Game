@@ -5,6 +5,7 @@ public class KnockbackAbility : MonoBehaviour
     [SerializeField] GameObject abilityDisplay1;
     [SerializeField] GameObject abilityDisplay2;
     public bool powerupKnockback;
+    private TestAttack attack;
     private void Start()
     {
         powerupKnockback = false;
@@ -30,6 +31,7 @@ public class KnockbackAbility : MonoBehaviour
     void OnPick()
     {
         powerupKnockback = true;
+        attack.repulseForce += 50;
         gameObject.SetActive(false);
 
     }
