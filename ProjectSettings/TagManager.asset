@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Gun
   - Gun Ability
+  - PlayerTut
   layers:
   - Default
   - TransparentFX
