@@ -1381,6 +1381,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2532488052438917241, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
       propertyPath: repulseForce
       value: 20
@@ -1884,6 +1888,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3640055675057126928, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520526610021169155, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9109580740797333942, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
