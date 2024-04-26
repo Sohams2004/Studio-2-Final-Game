@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 551946320}
   - component: {fileID: 551946319}
   - component: {fileID: 551946322}
-  - component: {fileID: 551946321}
+  - component: {fileID: 551946323}
   m_Layer: 0
   m_Name: red-flag-with-pole-in-pixel-art-style-vector-fotor-bg-remover-20240419145231
   m_TagString: Untagged
@@ -1087,19 +1087,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &551946321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551946318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b565cb9ead652479b813ebdf2855dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
 --- !u!61 &551946322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1145,6 +1132,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8014457, y: 2.6906633}
   m_EdgeRadius: 0
+--- !u!114 &551946323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551946318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df382b66431f1264ba2000359933b58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Tutorial 2
 --- !u!1001 &682610417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1660,6 +1660,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1150050505
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 17.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 16.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.100954
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.7826357
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751870450114375499, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901472536388273970, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_Name
+      value: SpeedBuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630057226013642198, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630057226013642198, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630057226013642198, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b1137da0a3173d43963a9c468276306, type: 3}
+    - target: {fileID: 5630057226013642198, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bdb1a0d74ea38e141b88db9bd7c15aca, type: 3}
 --- !u!1 &1268627773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,3 +3138,4 @@ SceneRoots:
   - {fileID: 1303737756}
   - {fileID: 2106206222}
   - {fileID: 472487373}
+  - {fileID: 1150050505}

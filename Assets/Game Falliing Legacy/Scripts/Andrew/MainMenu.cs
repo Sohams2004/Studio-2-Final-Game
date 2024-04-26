@@ -3,30 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    private bool isPaused = false;
+    [SerializeField] bool isPaused;
+    [SerializeField] int pauseIndex;
+    [SerializeField] string pauseActivate;
     [SerializeField] private GameObject pauseMenu;
+
     private void Start()
     {
         pauseMenu.SetActive(false);
+        pauseIndex = 1;
     }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown(pauseActivate) && pauseIndex % 2 is 0)
         {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            Debug.Log("Paused");
+            pauseIndex++;
+            PauseGame();
         }
 
+        else if (Input.GetButtonDown(pauseActivate) && pauseIndex % 2 is not 0)
+        {
+            Debug.Log("Unpaused");
+            pauseIndex++;
+            ResumeGame();
+        }
     }
     public void StartButton()
     {
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Menu()

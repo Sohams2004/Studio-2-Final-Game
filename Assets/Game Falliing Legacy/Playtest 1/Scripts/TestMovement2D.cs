@@ -122,6 +122,7 @@ public class TestMovement2D : MonoBehaviour
         {
             states = States1.move;
             anim.SetBool("Run", true);
+
         }
 
         else
