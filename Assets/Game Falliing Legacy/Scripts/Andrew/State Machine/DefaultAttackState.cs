@@ -8,8 +8,8 @@ public class DefaultAttackState : BaseState
     private string attackInput;
     public Collider2D[] target;
     [SerializeField] private Transform attackPos;
-    [SerializeField] private float attackRange;
-    [SerializeField] private float repulseForce;
+    [SerializeField] private float attackRange = 5;
+    [SerializeField] private float repulseForce = 5;
     [SerializeField] private LayerMask opponentLayer;
     private TestMovement2D testMovement2D;
     protected GameObject attackedObject;
@@ -44,7 +44,7 @@ public class DefaultAttackState : BaseState
     {
         if (collision.gameObject.CompareTag("Extend Ability"))
         {
-            context.SwitchState(context.ExtendedSwordState);
+            context.SwitchState(context.esState);
         }
     }
 }

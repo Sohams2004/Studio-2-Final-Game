@@ -8,18 +8,18 @@ public class AttackStateManager : MonoBehaviour
     public DefaultAttackState daState = new DefaultAttackState();
     public ExtendedSwordState esState = new ExtendedSwordState();
     
-    void Start()
+    public void Start()
     {
         currentState = daState;
         currentState.EnterState(this);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         currentState.OnCollisionEnter2D(this, collision);
     }
 
-    void Update()
+    public void Update()
     {
         currentState.UpdateState(this);
     }

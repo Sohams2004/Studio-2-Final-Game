@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class ExtendedSwordState : BaseState
 {
 
-    [SerializeField] int extendeAttackdRange = 10;
-    [SerializeField] int increasedRepulseForce = 5;
+    [SerializeField] int extendedAttackdRange = 10;
+    [SerializeField] int increasedRepulseForce = 10;
 
     private string attackInput;
     public Collider2D[] target;
@@ -27,7 +27,7 @@ public class ExtendedSwordState : BaseState
     {
         if (Input.GetButtonDown(attackInput))
         {
-            target = Physics2D.OverlapCircleAll(attackPos.position, extendeAttackdRange, opponentLayer);
+            target = Physics2D.OverlapCircleAll(attackPos.position, extendedAttackdRange, opponentLayer);
             testMovement2D.anim.SetBool("Attack 1", true);
             for (int i = 0; i < target.Length; i++)
             {
