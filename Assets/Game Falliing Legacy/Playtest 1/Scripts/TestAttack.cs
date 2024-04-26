@@ -16,10 +16,11 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] float tracker;
 
-    public string attackInput, blockInput;
+    public string attackInput, blockInput, abilityInput;
     public string crouchInput;
     public bool isBlocking;
     public bool isKnockBacked;
+    public bool playeraAbility;
     public Collider2D[] target;
     protected GameObject attackedObject;
     protected TestMovement2D testMovement2D;
@@ -61,6 +62,16 @@ public class TestAttack : MonoBehaviour, IPushable
             isKnockBacked = false;
         }
     }
+
+    void AbilityActivate()
+    {
+        if (Input.GetButtonDown(abilityInput))
+        {
+            Debug.Log("Ability activated");
+            playeraAbility = true;
+        }
+    }
+
     public void Push(Vector2 direction)
     {
         repulseForce++;
@@ -130,5 +141,6 @@ public class TestAttack : MonoBehaviour, IPushable
     {
         PlayerAttack();
         Block();
+        AbilityActivate();
     }
 }
