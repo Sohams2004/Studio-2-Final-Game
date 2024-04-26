@@ -567,7 +567,7 @@ MonoBehaviour:
   knockBackInterval: 0
   blockTime: 0
   blockPauseTimer: 0
-  originalAttackPos: {fileID: 0}
+  originalAttackPos: {fileID: 1732818755608423740}
   attackPos: {fileID: 7464228071366183677}
   upAttackPos: {fileID: 4512662745970251728}
   opponentLayer:
@@ -578,6 +578,7 @@ MonoBehaviour:
   attackInput: Fire1_P1
   blockInput: Block_P1
   abilityInput: Fire2_P1
+  verticalInput: Vertical_P1
   crouchInput: 
   isBlocking: 0
   isKnockBacked: 0
