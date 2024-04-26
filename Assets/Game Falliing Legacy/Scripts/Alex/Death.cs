@@ -25,15 +25,21 @@ public class Death : MatchManager
 
             if (stillin1)
             {
-                kO.Play();
-                outOfSight.SetActive(true);
 
                 animator1.SetBool("Death", true);
                 await Task.Delay(1200);
                 Destroy(other.gameObject);
                 player1Lives--;
                 WinCondition();
-                SceneManager.LoadScene(1);
+
+                if (player1Lives == 0)
+                {
+
+                    kO.Play();
+                    outOfSight.SetActive(true);
+                    await Task.Delay(2000);
+                    SceneManager.LoadScene(1);
+                }
             }
             else if (!stillin1)
             {
@@ -51,15 +57,20 @@ public class Death : MatchManager
 
             if (stillin2)
             {
-                kO.Play();
-                outOfSight.SetActive(true);
-
                 animator2.SetBool("Death", true);
                 await Task.Delay(1200);
                 Destroy(other.gameObject);
                 player2Lives--;
                 WinCondition();
-                SceneManager.LoadScene(1);
+
+                if (player2Lives == 0)
+                {
+
+                    kO.Play();
+                    outOfSight.SetActive(true);
+                    await Task.Delay(2000);
+                    SceneManager.LoadScene(1);
+                }
             }
             else if (!stillin2)
             {
