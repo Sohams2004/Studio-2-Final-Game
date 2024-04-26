@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MatchManager : MonoBehaviour
@@ -28,13 +26,13 @@ public class MatchManager : MonoBehaviour
 
     public void WinCondition()
     {
-        if (p1Lives.player1Lives <= 0)
+        if (p2Lives.player1Lives <= 0)
         {
             p1WinUI.SetActive(true);
             Time.timeScale = 0;
         }
 
-        if (p2Lives.player2Lives <= 0)
+        if (p1Lives.player2Lives <= 0)
         {
             p2WinUI.SetActive(true);
             Time.timeScale = 0;
