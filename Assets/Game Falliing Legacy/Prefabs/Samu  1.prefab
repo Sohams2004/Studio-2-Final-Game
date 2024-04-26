@@ -288,9 +288,9 @@ MonoBehaviour:
   knockBackInterval: 0
   blockTime: 0
   blockPauseTimer: 0
-  originalAttackPos: {fileID: 0}
+  originalAttackPos: {fileID: 4751601543110092982}
   attackPos: {fileID: 3569616790400125934}
-  upAttackPos: {fileID: 0}
+  upAttackPos: {fileID: 72973546549631324}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -298,7 +298,8 @@ MonoBehaviour:
   tracker: 0
   attackInput: Fire1_P2
   blockInput: Block_P2
-  abilityInput: 
+  abilityInput: Fire2_P2
+  verticalInput: Vertical_P2
   crouchInput: 
   isBlocking: 0
   isKnockBacked: 0
@@ -397,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4751601543110092982}
   m_Layer: 7
-  m_Name: Attack 1 (2)
+  m_Name: Normal attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 5352626637951286533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.039, y: 0.384, z: -0.05572761}
+  m_LocalPosition: {x: 0.344, y: 0.014, z: -0.05572761}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -428,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 72973546549631324}
   m_Layer: 7
-  m_Name: Attack 1 (1)
+  m_Name: Up attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

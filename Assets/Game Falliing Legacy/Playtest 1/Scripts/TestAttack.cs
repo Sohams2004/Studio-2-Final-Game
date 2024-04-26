@@ -16,7 +16,7 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] float tracker;
 
-    public string attackInput, blockInput, abilityInput;
+    public string attackInput, blockInput, abilityInput, verticalInput;
     public string crouchInput;
     public bool isBlocking;
     public bool isKnockBacked;
@@ -65,17 +65,18 @@ public class TestAttack : MonoBehaviour, IPushable
 
     void AttackUpwards()
     {
-        float joystickUp = Input.GetAxis("Vertical");
+        float joystickUp = Input.GetAxis(verticalInput);
 
-        if (joystickUp > 0)
+        if (joystickUp < -0.5f)
         {
-            Debug.Log("joystick up");
+            Debug.Log(joystickUp);
             attackPos.position = upAttackPos.position;
             //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
 
         else
         {
+            Debug.Log(joystickUp);
             attackPos.position = originalAttackPos.position;
             //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
             //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
