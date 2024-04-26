@@ -744,7 +744,7 @@ PrefabInstance:
     - target: {fileID: 628129458713071396, guid: f98b0dca9e3f5d6419d4940486679415, type: 3}
       propertyPath: animator1
       value: 
-      objectReference: {fileID: 1645483112}
+      objectReference: {fileID: 4422566243535797420}
     - target: {fileID: 628129458713071396, guid: f98b0dca9e3f5d6419d4940486679415, type: 3}
       propertyPath: animator2
       value: 
@@ -1001,6 +1001,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: upAttackPos
+      value: 
+      objectReference: {fileID: 646706591}
+    - target: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
       propertyPath: abilityInput
       value: Fire2_P2
       objectReference: {fileID: 0}
@@ -1012,9 +1016,21 @@ PrefabInstance:
       propertyPath: Knockbacktracker
       value: 
       objectReference: {fileID: 604670890}
+    - target: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: originalAttackPos
+      value: 
+      objectReference: {fileID: 307714095}
     - target: {fileID: 4728511811440799742, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
       propertyPath: m_Name
       value: Samu  1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352626637951286533, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: m_Name
+      value: Normal attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087725032326634633, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: m_Name
+      value: Up Attack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1172,7 +1188,7 @@ PrefabInstance:
     - target: {fileID: 1251362102294716284, guid: f07fd1d3f9713a44eabc67eec31b1e3d, type: 3}
       propertyPath: player1
       value: 
-      objectReference: {fileID: 1645483119}
+      objectReference: {fileID: 3640055674125195065}
     - target: {fileID: 1251362102294716284, guid: f07fd1d3f9713a44eabc67eec31b1e3d, type: 3}
       propertyPath: player2
       value: 
@@ -1980,7 +1996,7 @@ PrefabInstance:
     - target: {fileID: 1663506898899034793, guid: 66858c414ec6c73439b45ed40e17d403, type: 3}
       propertyPath: animator1
       value: 
-      objectReference: {fileID: 1645483112}
+      objectReference: {fileID: 4422566243535797420}
     - target: {fileID: 1663506898899034793, guid: 66858c414ec6c73439b45ed40e17d403, type: 3}
       propertyPath: animator2
       value: 
@@ -2188,7 +2204,7 @@ PrefabInstance:
     - target: {fileID: 7320068915558264605, guid: 66858c414ec6c73439b45ed40e17d403, type: 3}
       propertyPath: animator1
       value: 
-      objectReference: {fileID: 1645483112}
+      objectReference: {fileID: 4422566243535797420}
     - target: {fileID: 7320068915558264605, guid: 66858c414ec6c73439b45ed40e17d403, type: 3}
       propertyPath: animator2
       value: 
@@ -2289,7 +2305,7 @@ SceneRoots:
   - {fileID: 2050549347}
   - {fileID: 171870047}
   - {fileID: 1117763377}
-  - {fileID: 1217145129}
+  - {fileID: 2716458254714506485}
   - {fileID: 715018789}
   - {fileID: 604670889}
   - {fileID: 618269892}
