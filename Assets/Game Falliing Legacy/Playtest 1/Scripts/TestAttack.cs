@@ -71,14 +71,14 @@ public class TestAttack : MonoBehaviour, IPushable
         {
             Debug.Log("joystick up");
             attackPos.position = upAttackPos.position;
-            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
 
         else
         {
             attackPos.position = originalAttackPos.position;
-            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
-            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
