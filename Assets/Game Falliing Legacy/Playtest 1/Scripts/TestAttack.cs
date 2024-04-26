@@ -9,7 +9,7 @@ public class TestAttack : MonoBehaviour, IPushable
     [SerializeField] int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
-    [SerializeField] protected Transform attackPos;
+    [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
     [SerializeField] protected LayerMask opponentLayer;
 
     [SerializeField] TMP_Text Knockbacktracker;
@@ -60,6 +60,24 @@ public class TestAttack : MonoBehaviour, IPushable
         {
             testMovement2D.anim.SetBool("Attack 1", false);
             isKnockBacked = false;
+        }
+    }
+
+    void AttackUpwards()
+    {
+        float joystickUp = Input.GetAxis("Vertical");
+
+        Transform currentAttackPos = attackPos;
+
+        if (joystickUp > 0)
+        {
+            Debug.Log("joystick up");
+            attackPos.position = upAttackPos.position;
+        }
+
+        else
+        {
+            attackPos.position = currentAttackPos.position;
         }
     }
 
@@ -142,5 +160,6 @@ public class TestAttack : MonoBehaviour, IPushable
         PlayerAttack();
         Block();
         AbilityActivate();
+        AttackUpwards();
     }
 }

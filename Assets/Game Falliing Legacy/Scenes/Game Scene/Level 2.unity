@@ -968,6 +968,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &553242304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553242305}
+  m_Layer: 7
+  m_Name: Attack 2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &553242305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553242304}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0.404, z: -0.05572761}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1645483119}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597611720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1417,37 @@ PolygonCollider2D:
       - {x: 0.555, y: -0.59999996}
       - {x: 0.575, y: -0.59999996}
   m_UseDelaunayMesh: 0
+--- !u!1 &646706590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646706591}
+  m_Layer: 7
+  m_Name: Attack 1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &646706591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646706590}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.039, y: 0.384, z: -0.05572761}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1411803380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &715018789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1439,6 +1501,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: upAttackPos
+      value: 
+      objectReference: {fileID: 646706591}
+    - target: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
       propertyPath: abilityInput
       value: Fire2_P2
       objectReference: {fileID: 0}
@@ -1456,7 +1522,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1189416974410992787, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 646706591}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
 --- !u!1 &752030338
@@ -1951,6 +2020,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8331357773962993675, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: gravityFalling
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109580740797333942, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      propertyPath: upAttackPos
+      value: 
+      objectReference: {fileID: 553242305}
     - target: {fileID: 9109580740797333942, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
       propertyPath: abilityInput
       value: Fire2_P1
@@ -1965,7 +2042,10 @@ PrefabInstance:
       objectReference: {fileID: 604670891}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3640055675057126928, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 553242305}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f4d11fe290dcd8419401c89edced0e4, type: 3}
 --- !u!1 &1282939348
