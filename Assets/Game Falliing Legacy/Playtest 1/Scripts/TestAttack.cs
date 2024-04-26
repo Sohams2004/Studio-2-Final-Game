@@ -67,17 +67,18 @@ public class TestAttack : MonoBehaviour, IPushable
     {
         float joystickUp = Input.GetAxis("Vertical");
 
-        Transform currentAttackPos = attackPos;
-
         if (joystickUp > 0)
         {
             Debug.Log("joystick up");
             attackPos.position = upAttackPos.position;
+            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
 
         else
         {
-            attackPos.position = currentAttackPos.position;
+            attackPos.position = originalAttackPos.position;
+            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
+            testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
