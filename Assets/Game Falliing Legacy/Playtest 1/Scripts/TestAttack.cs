@@ -47,12 +47,6 @@ public class TestAttack : MonoBehaviour, IPushable
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
                 isKnockBacked = true;
                 KnockBackTrack();
-                //target[i].attachedRigidbody.velocity = new Vector2(testMovement2D.facingDirection, 0) * repulseForce;
-                /*knockBackObject = gameObject.GetComponent<KnockBackObject>();
-                if (knockBackObject is not null)
-                {
-                    Vector2 knockBackDirection = (transform.position - attackPos.position).normalized;
-                }*/
             }
         }
         else
@@ -70,15 +64,12 @@ public class TestAttack : MonoBehaviour, IPushable
         {
             Debug.Log(joystickUp);
             attackPos.position = upAttackPos.position;
-            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
 
         else
         {
             Debug.Log(joystickUp);
             attackPos.position = originalAttackPos.position;
-            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
-            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 

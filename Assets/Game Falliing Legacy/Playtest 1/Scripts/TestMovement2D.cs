@@ -163,15 +163,12 @@ public class TestMovement2D : MonoBehaviour
 
     public void Jump()
     {
-
-
         if (Input.GetButtonDown(jumpInput))
         {
             print(jumpInput);
             if (isGrounded)
             {
                 print("force it up");
-
                 playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
         }
@@ -184,30 +181,20 @@ public class TestMovement2D : MonoBehaviour
         else
         {
             states = States1.idle;
-
             anim.SetBool("Jump", false);
-
         }
 
         if (playerRb.velocity.y < -0.1f)
         {
-
             playerRb.gravityScale = gravityFalling;
             anim.SetBool("Fall", true);
-
-
             //playerRb.AddForce(Physics2D.gravity * playerRb.gravityScale * playerRb.mass);
         }
         else
         {
             playerRb.gravityScale = gravityNormal;
             anim.SetBool("Fall", false);
-
         }
-
-
-
-
     }
 
     private void OnDrawGizmos()
