@@ -9,14 +9,14 @@ public class TestAttack : MonoBehaviour, IPushable
     [SerializeField] int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
-    [SerializeField] protected Transform attackPos;
+    [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
     [SerializeField] protected LayerMask opponentLayer;
 
     [SerializeField] TMP_Text Knockbacktracker;
 
     [SerializeField] float tracker;
 
-    public string attackInput, blockInput, abilityInput;
+    public string attackInput, blockInput, abilityInput, verticalInput;
     public string crouchInput;
     public bool isBlocking;
     public bool isKnockBacked;
@@ -60,6 +60,26 @@ public class TestAttack : MonoBehaviour, IPushable
         {
             testMovement2D.anim.SetBool("Attack 1", false);
             isKnockBacked = false;
+        }
+    }
+
+    void AttackUpwards()
+    {
+        float joystickUp = Input.GetAxis(verticalInput);
+
+        if (joystickUp < -0.5f)
+        {
+            Debug.Log(joystickUp);
+            attackPos.position = upAttackPos.position;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
+
+        else
+        {
+            Debug.Log(joystickUp);
+            attackPos.position = originalAttackPos.position;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
@@ -142,5 +162,6 @@ public class TestAttack : MonoBehaviour, IPushable
         PlayerAttack();
         Block();
         AbilityActivate();
+        AttackUpwards();
     }
 }

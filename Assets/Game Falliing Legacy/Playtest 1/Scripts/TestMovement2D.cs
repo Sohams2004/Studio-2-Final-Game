@@ -75,12 +75,12 @@ public class TestMovement2D : MonoBehaviour
                 
                 break;
         }*/
-        SetInput();
+       // SetInput();
     }
 
 
 
-    private void SetInput()
+    /*private void SetInput()
     {
         string horizontalAxis = $"Horizontal_P{playerInput.playerIndex + 1}";
         string jumpAxis = $"Jump_P{playerInput.playerIndex + 1}";
@@ -92,7 +92,7 @@ public class TestMovement2D : MonoBehaviour
         horizontalInput = horizontalAxis;
         jumpInput = jumpAxis;
         testAttack.crouchInput = crouchAxis;
-    }
+    }*/
 
 
     public void Movement()
@@ -110,7 +110,7 @@ public class TestMovement2D : MonoBehaviour
             facingDirection = -1;
         }
 
-        Vector2 playerMove = new Vector2(horizontal * movementSpeed, 0);
+        Vector2 playerMove = new Vector2(horizontal * movementSpeed * 2, 0);
         playerRb.AddForce(playerMove);
 
         if (playerRb.velocity.magnitude > maxSpeed)
