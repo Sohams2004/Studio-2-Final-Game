@@ -780,6 +780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kusaru
       objectReference: {fileID: 0}
+    - target: {fileID: 8923437904523893443, guid: 28dc235f5df3afc439a8c38298fd71f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3076,3 +3080,4 @@ SceneRoots:
   - {fileID: 1049477992}
   - {fileID: 546982293}
   - {fileID: 1741224135}
+  - {fileID: 325443477}
