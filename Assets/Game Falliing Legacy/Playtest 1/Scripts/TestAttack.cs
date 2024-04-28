@@ -6,13 +6,13 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
-    public int knocBackCount;
+    [SerializeField] int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
     [SerializeField] protected LayerMask opponentLayer;
 
-    public TMP_Text Knockbacktracker;
+    [SerializeField] TMP_Text Knockbacktracker;
 
     [SerializeField] float tracker;
 
@@ -24,11 +24,6 @@ public class TestAttack : MonoBehaviour, IPushable
     public Collider2D[] target;
     protected GameObject attackedObject;
     protected TestMovement2D testMovement2D;
-
-    [SerializeField] float playerIndicationTimer;
-    [SerializeField] bool startPlayerIndicationTimer;
-
-    [SerializeField] SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -167,14 +162,12 @@ public class TestAttack : MonoBehaviour, IPushable
         Block();
         AbilityActivate();
         AttackUpwards();
-
-        if (startPlayerIndicationTimer)
+        testMovement2D.anim.SetBool("Damge", true);
+        if (isKnockBacked)
         {
-            playerIndicationTimer += Time.deltaTime;
-            testMovement2D.anim.SetTrigger("Damge");
-        }
 
-        if (playerIndicationTimer >= 0.5f)
+        }
+        else if (!isKnockBacked)
         {
             playerIndicationTimer = 0;
             startPlayerIndicationTimer = false;
