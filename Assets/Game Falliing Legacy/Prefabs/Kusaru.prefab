@@ -141,11 +141,11 @@ MonoBehaviour:
   camera: {fileID: 0}
   isFiring: 0
   bullet: {fileID: 9008850264700620818, guid: 9e17f9011e682c7498eb9572db9cb871, type: 3}
-  gun: {fileID: 0}
+  gun: {fileID: 4577730458935015786}
   bulletPoint: {fileID: 219706011270898230}
   timer: 0
   fireTimer: 0.5
-  attack: {fileID: 0}
+  attack: {fileID: 2710269356229873452}
 --- !u!1 &4577730458935015786
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,9 +637,9 @@ MonoBehaviour:
   abilityTimer: 0
   abilityCoolDown: 0
   maxAbilityTime: 15
-  maxCoolDownTime: 0
+  maxCoolDownTime: 15
   playeraAbility: 0
   timerOn: 0
   coolDownTimer: 0
-  testAttack: {fileID: 0}
+  testAttack: {fileID: 2710269356229873452}
   shoot: {fileID: 3926338283364550038}
