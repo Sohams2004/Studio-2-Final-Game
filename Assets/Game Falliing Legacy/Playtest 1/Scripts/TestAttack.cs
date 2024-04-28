@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class TestAttack : MonoBehaviour, IPushable
 {
@@ -9,8 +11,11 @@ public class TestAttack : MonoBehaviour, IPushable
     [SerializeField] int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
+    [SerializeField] float playerIndicationTimer;
+    [SerializeField] bool startPlayerIndicationTimer;
     [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
     [SerializeField] protected LayerMask opponentLayer;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     [SerializeField] TMP_Text Knockbacktracker;
 
@@ -45,6 +50,12 @@ public class TestAttack : MonoBehaviour, IPushable
                 attackedObject = target[i].gameObject;
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
+                spriteRenderer = target[i].GetComponent<SpriteRenderer>();
+                var sprite = spriteRenderer;
+                sprite.color = Color.red;
+                startPlayerIndicationTimer = true;
+
+                
                 isKnockBacked = true;
                 KnockBackTrack();
             }
@@ -143,5 +154,21 @@ public class TestAttack : MonoBehaviour, IPushable
         PlayerAttack();
         Block();
         AttackUpwards();
+
+        if (startPlayerIndicationTimer)
+        {
+            playerIndicationTimer += Time.deltaTime;
+        }
+
+        if (playerIndicationTimer >= 0.5f)
+        {
+            playerIndicationTimer = 0;
+            startPlayerIndicationTimer = false;
+        }
+
+        if (!startPlayerIndicationTimer)
+        {
+            spriteRenderer.color = Color.white;
+        }
     }
 }
