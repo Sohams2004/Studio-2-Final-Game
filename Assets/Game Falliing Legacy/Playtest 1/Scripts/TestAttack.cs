@@ -50,6 +50,10 @@ public class TestAttack : MonoBehaviour, IPushable
                 attackedObject = target[i].gameObject;
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
+                isKnockBacked = true;
+                repulseForce++;
+                KnockBackTrack();
+
                 spriteRenderer = target[i].GetComponent<SpriteRenderer>();
                 var sprite = spriteRenderer;
                 sprite.color = Color.red;
@@ -152,8 +156,6 @@ public class TestAttack : MonoBehaviour, IPushable
         testMovement2D.anim.SetBool("Damge", true);
         if (isKnockBacked)
         {
-            playerIndicationTimer += Time.deltaTime;
-        }
 
         }
         else if (!isKnockBacked)
@@ -161,7 +163,6 @@ public class TestAttack : MonoBehaviour, IPushable
             playerIndicationTimer = 0;
             startPlayerIndicationTimer = false;
         }
-
         if (!startPlayerIndicationTimer)
         {
             spriteRenderer.color = Color.white;
