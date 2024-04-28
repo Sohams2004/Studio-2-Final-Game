@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Death : MatchManager
 {
@@ -33,65 +32,9 @@ public class Death : MatchManager
     }
     async private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player 1")
-        {
-            stillin1 = true;
-            await Task.Delay(500);
-
-            if (stillin1)
-            {
-
-                animator1.SetTrigger("Death");
-                await Task.Delay(1200);
-
-                player1Lives--;
-                WinCondition();
-                if (player1Lives == 4)
-                {
-                    player1health4.SetActive(false);
-                    player1.transform.position = respawnLocation1.transform.position;
-                    Physics2D.SyncTransforms();
-                }
-
-                else if (player1Lives == 3)
-                {
-                    player1health3.SetActive(false);
-                    player1.transform.position = respawnLocation1.transform.position;
-                    Physics2D.SyncTransforms();
-                }
-                else if (player1Lives == 2)
-                {
-                    player1health2.SetActive(false);
-                    player1.transform.position = respawnLocation1.transform.position;
-                    Physics2D.SyncTransforms();
-                }
-                if (player1Lives == 1)
-                {
-                    player1health1.SetActive(false);
-                    player1.transform.position = respawnLocation1.transform.position;
-                    Physics2D.SyncTransforms();
-                }
-                else if (player1Lives == 0)
-                {
-
-                    kO.Play();
-                    Destroy(other.gameObject);
-                    outOfSight.SetActive(true);
-                    await Task.Delay(2000);
-                    SceneManager.LoadScene(1);
-                }
-            }
-            else if (!stillin1)
-            {
-                stillin1 = false;
-                outOfSight.SetActive(false);
-                animator1.ResetTrigger("Death");
-                await Task.Delay(400);
-
-            }
 
 
-        }
+
         if (other.tag == "Player 2")
         {
             stillin2 = true;
@@ -103,7 +46,6 @@ public class Death : MatchManager
                 await Task.Delay(1200);
 
                 player2Lives--;
-                WinCondition();
 
                 if (player2Lives == 4)
                 {
@@ -135,10 +77,12 @@ public class Death : MatchManager
                 {
 
                     kO.Play();
-                    Destroy(other.gameObject);
+
                     outOfSight.SetActive(true);
                     await Task.Delay(2000);
-                    SceneManager.LoadScene(1);
+                    WinCondition();
+                    Destroy(other.gameObject);
+
                 }
             }
             else if (!stillin2)
