@@ -8,7 +8,7 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
-    public int knocBackCount;
+    [SerializeField] int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] float playerIndicationTimer;
@@ -50,10 +50,12 @@ public class TestAttack : MonoBehaviour, IPushable
                 attackedObject = target[i].gameObject;
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
+<<<<<<< HEAD
                 isKnockBacked = true;
                 repulseForce++;
                 KnockBackTrack();
-
+=======
+>>>>>>> 735364b (Revert "Merge branch 'main' into Soham")
                 spriteRenderer = target[i].GetComponent<SpriteRenderer>();
                 var sprite = spriteRenderer;
                 sprite.color = Color.red;
@@ -156,6 +158,8 @@ public class TestAttack : MonoBehaviour, IPushable
         testMovement2D.anim.SetBool("Damge", true);
         if (isKnockBacked)
         {
+            playerIndicationTimer += Time.deltaTime;
+        }
 
         }
         else if (!isKnockBacked)
@@ -163,7 +167,12 @@ public class TestAttack : MonoBehaviour, IPushable
             playerIndicationTimer = 0;
             startPlayerIndicationTimer = false;
         }
+<<<<<<< HEAD
+        else if (!startPlayerIndicationTimer)
+=======
+
         if (!startPlayerIndicationTimer)
+>>>>>>> 735364b (Revert "Merge branch 'main' into Soham")
         {
             spriteRenderer.color = Color.white;
         }
