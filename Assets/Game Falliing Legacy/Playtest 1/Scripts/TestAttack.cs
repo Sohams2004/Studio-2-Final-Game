@@ -14,7 +14,7 @@ public class TestAttack : MonoBehaviour, IPushable
 
     public TMP_Text Knockbacktracker;
 
-    [SerializeField] float tracker;
+    [SerializeField] public float tracker;
 
     public string attackInput, blockInput, abilityInput, verticalInput;
     public string crouchInput;

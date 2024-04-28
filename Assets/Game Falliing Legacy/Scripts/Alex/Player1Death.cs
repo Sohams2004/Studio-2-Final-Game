@@ -47,7 +47,7 @@ public class Player1Death : MatchManager
                     player1health4.SetActive(false);
                     player1.transform.position = respawnLocation1.transform.position;
                     Physics2D.SyncTransforms();
-                    attack.knocBackCount = 0;
+                    attack.tracker = 0;
                 }
 
                 else if (player1Lives == 3)
@@ -55,21 +55,21 @@ public class Player1Death : MatchManager
                     player1health3.SetActive(false);
                     player1.transform.position = respawnLocation1.transform.position;
                     Physics2D.SyncTransforms();
-                    attack.knocBackCount = 0;
+                    attack.tracker = 0;
                 }
                 else if (player1Lives == 2)
                 {
                     player1health2.SetActive(false);
                     player1.transform.position = respawnLocation1.transform.position;
                     Physics2D.SyncTransforms();
-                    attack.knocBackCount = 0;
+                    attack.tracker = 0;
                 }
                 if (player1Lives == 1)
                 {
                     player1health1.SetActive(false);
                     player1.transform.position = respawnLocation1.transform.position;
                     Physics2D.SyncTransforms();
-                    attack.knocBackCount = 0;
+                    attack.tracker = 0;
                 }
                 else if (player1Lives == 0)
                 {
