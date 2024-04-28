@@ -6,13 +6,13 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
-    [SerializeField] int knocBackCount;
+    public int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
     [SerializeField] protected LayerMask opponentLayer;
 
-    [SerializeField] TMP_Text Knockbacktracker;
+    public TMP_Text Knockbacktracker;
 
     [SerializeField] float tracker;
 
@@ -24,6 +24,11 @@ public class TestAttack : MonoBehaviour, IPushable
     public Collider2D[] target;
     protected GameObject attackedObject;
     protected TestMovement2D testMovement2D;
+
+    [SerializeField] float playerIndicationTimer;
+    [SerializeField] bool startPlayerIndicationTimer;
+
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -49,6 +54,11 @@ public class TestAttack : MonoBehaviour, IPushable
                 isKnockBacked = true;
                 repulseForce++;
                 KnockBackTrack();
+                spriteRenderer = target[i].GetComponent<SpriteRenderer>();
+                var sprite = spriteRenderer;
+                sprite.color = Color.red;
+                startPlayerIndicationTimer = true;
+
                 //target[i].attachedRigidbody.velocity = new Vector2(testMovement2D.facingDirection, 0) * repulseForce;
                 /*knockBackObject = gameObject.GetComponent<KnockBackObject>();
                 if (knockBackObject is not null)
@@ -164,14 +174,22 @@ public class TestAttack : MonoBehaviour, IPushable
         Block();
         AbilityActivate();
         AttackUpwards();
-        testMovement2D.anim.SetBool("Damge", true);
-        if (isKnockBacked)
-        {
 
-        }
-        else if (!isKnockBacked)
+        if (startPlayerIndicationTimer)
         {
-            testMovement2D.anim.SetBool("Damge", false);
+            playerIndicationTimer += Time.deltaTime;
+            testMovement2D.anim.SetTrigger("Damge");
+        }
+
+        if (playerIndicationTimer >= 0.5f)
+        {
+            playerIndicationTimer = 0;
+            startPlayerIndicationTimer = false;
+        }
+        else if (!startPlayerIndicationTimer)
+        {
+            spriteRenderer.color = Color.white;
+            testMovement2D.anim.SetTrigger("Damge");
         }
 
     }
