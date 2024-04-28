@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 212409531424896261}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.404, z: -0.05572761}
+  m_LocalPosition: {x: 0.03, y: 0.47, z: -0.05572761}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -141,9 +141,11 @@ MonoBehaviour:
   camera: {fileID: 0}
   isFiring: 0
   bullet: {fileID: 9008850264700620818, guid: 9e17f9011e682c7498eb9572db9cb871, type: 3}
+  gun: {fileID: 0}
   bulletPoint: {fileID: 219706011270898230}
   timer: 0
   fireTimer: 0.5
+  attack: {fileID: 0}
 --- !u!1 &4577730458935015786
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +279,7 @@ GameObject:
   - component: {fileID: 5474720259365867107}
   - component: {fileID: 2710269356229873452}
   - component: {fileID: 3800155583473290684}
+  - component: {fileID: 1504451166803461468}
   m_Layer: 7
   m_Name: Kusaru
   m_TagString: Player 1
@@ -544,11 +547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c149c53a6e84514e8ef2b25bffec984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 0}
   isGunActive: 0
   abilityTimer: 0
   maxTime: 10
-  attack: {fileID: 0}
+  kusaruAbility: {fileID: 0}
 --- !u!114 &2710269356229873452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,22 +569,23 @@ MonoBehaviour:
   knockBackInterval: 0
   blockTime: 0
   blockPauseTimer: 0
+  playerIndicationTimer: 0
+  startPlayerIndicationTimer: 0
   originalAttackPos: {fileID: 1732818755608423740}
   attackPos: {fileID: 7464228071366183677}
   upAttackPos: {fileID: 4512662745970251728}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 192
+  spriteRenderer: {fileID: 0}
   Knockbacktracker: {fileID: 0}
   tracker: 0
   attackInput: Fire1_P1
   blockInput: Block_P1
-  abilityInput: Fire2_P1
   verticalInput: Vertical_P1
   crouchInput: 
   isBlocking: 0
   isKnockBacked: 0
-  playeraAbility: 0
   target:
   - {fileID: 0}
 --- !u!114 &3800155583473290684
@@ -618,3 +621,25 @@ MonoBehaviour:
   playerInput: {fileID: 2978519865207194631}
   anim: {fileID: 0}
   maxSpeed: 80
+--- !u!114 &1504451166803461468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8923437904523893443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30146b1ee035e4b43ac6efaba91fe699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityInput: Fire2_Kusaru
+  abilityTimer: 0
+  abilityCoolDown: 0
+  maxAbilityTime: 15
+  maxCoolDownTime: 0
+  playeraAbility: 0
+  timerOn: 0
+  coolDownTimer: 0
+  testAttack: {fileID: 0}
+  shoot: {fileID: 3926338283364550038}

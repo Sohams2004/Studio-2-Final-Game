@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 1189416974410992787}
   - component: {fileID: 23410102619107766}
   - component: {fileID: 6853189255034980085}
-  - component: {fileID: 2532488052438917241}
   - component: {fileID: 5616700081451960126}
   - component: {fileID: 2891205510442028559}
   - component: {fileID: 4003814520141085228}
@@ -220,23 +219,6 @@ MonoBehaviour:
   m_DefaultActionMap: Ingame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2532488052438917241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728511811440799742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c149c53a6e84514e8ef2b25bffec984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 0}
-  isGunActive: 0
-  abilityTimer: 0
-  maxTime: 10
-  attack: {fileID: 0}
 --- !u!114 &5616700081451960126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,22 +270,23 @@ MonoBehaviour:
   knockBackInterval: 0
   blockTime: 0
   blockPauseTimer: 0
+  playerIndicationTimer: 0
+  startPlayerIndicationTimer: 0
   originalAttackPos: {fileID: 4751601543110092982}
   attackPos: {fileID: 3569616790400125934}
   upAttackPos: {fileID: 72973546549631324}
   opponentLayer:
     serializedVersion: 2
     m_Bits: 128
+  spriteRenderer: {fileID: 0}
   Knockbacktracker: {fileID: 0}
   tracker: 0
   attackInput: Fire1_P2
   blockInput: Block_P2
-  abilityInput: Fire2_P2
   verticalInput: Vertical_P2
   crouchInput: 
   isBlocking: 0
   isKnockBacked: 0
-  playeraAbility: 0
   target: []
 --- !u!70 &4003814520141085228
 CapsuleCollider2D:
@@ -444,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 8087725032326634633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.039, y: 0.384, z: -0.05572761}
+  m_LocalPosition: {x: 0.039, y: 0.517, z: -0.05572761}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
