@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: testAttack
       value: 
       objectReference: {fileID: 4898415771723439486}
+    - target: {fileID: 3800155583473290684, guid: 28dc235f5df3afc439a8c38298fd71f6, type: 3}
+      propertyPath: movementSpeed
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 3926338283364550038, guid: 28dc235f5df3afc439a8c38298fd71f6, type: 3}
       propertyPath: gun
       value: 
@@ -157,11 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc551bc1b14ff341bc4512501544f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1Lives: {fileID: 0}
-  p2Lives: {fileID: 0}
-  p1WinUI: {fileID: 0}
-  p2WinUI: {fileID: 0}
-  deathBound: {fileID: 0}
   kO: {fileID: 0}
   animator1: {fileID: 4117193064849888740}
   outOfSight: {fileID: 0}
@@ -172,6 +171,7 @@ MonoBehaviour:
   player1health2: {fileID: 0}
   player1health3: {fileID: 0}
   player1health4: {fileID: 0}
+  p2WinUI: {fileID: 0}
 --- !u!95 &4117193064849888740 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6864983268066723766, guid: 28dc235f5df3afc439a8c38298fd71f6, type: 3}

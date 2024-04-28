@@ -13,8 +13,8 @@ public class TestMovement2D : MonoBehaviour
     [SerializeField] public Players players;
     [SerializeField] public States1 states;
 
-    [SerializeField] public float movementSpeed, facingDirection;
-    [SerializeField] float rayLength, jumpForce;
+    public float movementSpeed, facingDirection;
+    public float rayLength, jumpForce;
 
     public string horizontalInput;
     public string jumpInput;

@@ -112,9 +112,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: abilityInput
+      value: Fire2_Samu
+      objectReference: {fileID: 0}
     - target: {fileID: 4728511811440799742, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
       propertyPath: m_Name
       value: Samu  1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616700081451960126, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      propertyPath: movementSpeed
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -123,7 +131,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4728511811440799742, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1221404384968452584}
+    - targetCorrespondingSourceObject: {fileID: 4728511811440799742, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8121963590208379360}
   m_SourcePrefab: {fileID: 100100000, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+--- !u!114 &1155844904452666830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5616700081451960126, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+  m_PrefabInstance: {fileID: 6771412892643406576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046860014557617422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee268ae801cf3447956d7f7ce80f817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2046860014557617422 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4728511811440799742, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
@@ -141,11 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f2083014b48249aa2daf040d65a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1Lives: {fileID: 0}
-  p2Lives: {fileID: 0}
-  p1WinUI: {fileID: 0}
-  p2WinUI: {fileID: 0}
-  deathBound: {fileID: 0}
   kO: {fileID: 0}
   animator2: {fileID: 9020599020895837694}
   outOfSight: {fileID: 0}
@@ -156,11 +173,48 @@ MonoBehaviour:
   player2health2: {fileID: 0}
   player2health3: {fileID: 0}
   player2health4: {fileID: 0}
+  p1WinUI: {fileID: 0}
+--- !u!114 &8121963590208379360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046860014557617422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac2c4c69b49d4a4c93d18e6eba00606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testAttack: {fileID: 8495834202842742015}
+  testMovement: {fileID: 1155844904452666830}
+  powerupKnockback: 0
+  abilityInput: Fire2_Samu
+  abilityTimer: 0
+  abilityCoolDown: 0
+  maxAbilityTime: 15
+  maxCoolDownTime: 15
+  playeraAbility: 0
+  timerOn: 0
+  coolDownTimer: 0
+  abilityActive: 0
+  samuButton: {fileID: 0}
 --- !u!4 &5582577091734732387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1189416974410992787, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
   m_PrefabInstance: {fileID: 6771412892643406576}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8495834202842742015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2891205510442028559, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}
+  m_PrefabInstance: {fileID: 6771412892643406576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046860014557617422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae94cede4788574787aa966d24cdaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &9020599020895837694 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2366499913484283662, guid: 61368c0128eded64ea4b1ffde90ef450, type: 3}

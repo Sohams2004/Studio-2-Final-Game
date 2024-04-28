@@ -20,11 +20,12 @@ public class Player1Death : MatchManager
     [SerializeField] GameObject player1health2;
     [SerializeField] GameObject player1health3;
     [SerializeField] GameObject player1health4;
-
+    public GameObject p2WinUI;
     void Start()
     {
         outOfSight.SetActive(false);
         attack = GetComponent<TestAttack>();
+        p2WinUI.SetActive(false);
     }
     async private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,7 +40,7 @@ public class Player1Death : MatchManager
 
                 animator1.SetTrigger("Death");
                 await Task.Delay(1200);
-
+                attack.tracker = 0;
                 player1Lives--;
 
                 if (player1Lives == 4)

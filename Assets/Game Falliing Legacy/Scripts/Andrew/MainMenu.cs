@@ -11,23 +11,25 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         pauseMenu.SetActive(false);
-        pauseIndex = 1;
+        pauseIndex = 2;
     }
 
     void Update()
     {
         if (Input.GetButtonDown(pauseActivate) && pauseIndex % 2 is 0)
         {
+
+            PauseGame();
             Debug.Log("Paused");
             pauseIndex++;
-            PauseGame();
         }
 
         else if (Input.GetButtonDown(pauseActivate) && pauseIndex % 2 is not 0)
         {
+
+            ResumeGame();
             Debug.Log("Unpaused");
             pauseIndex++;
-            ResumeGame();
         }
     }
     public void StartButton()
@@ -47,15 +49,17 @@ public class MainMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        pauseMenu.SetActive(true);
+
     }
     public void ResumeGame()
     {
+        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        pauseMenu.SetActive(false);
+
     }
 
 }

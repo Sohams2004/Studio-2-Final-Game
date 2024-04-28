@@ -1,21 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KusaruAbility : MonoBehaviour
+public class SamuAbility1 : MonoBehaviour
 {
+    [SerializeField] TestAttack testAttack;
+    [SerializeField] TestMovement2D testMovement;
+    public bool powerupKnockback;
+
     [SerializeField] string abilityInput;
     [SerializeField] float abilityTimer, abilityCoolDown;
     [SerializeField] float maxAbilityTime, maxCoolDownTime;
     public bool playeraAbility, timerOn, coolDownTimer;
 
-    [SerializeField] TestAttack testAttack;
-    [SerializeField] Shoot shoot;
+    [SerializeField] bool abilityActive;
 
-    [SerializeField] Button KusaruButton;
+    [SerializeField] Button samuButton;
     private void Start()
     {
         testAttack = GetComponent<TestAttack>();
-        shoot.gun.SetActive(false);
+        testMovement = GetComponent<TestMovement2D>();
+
     }
 
     void AbilityActivate()
@@ -24,22 +28,34 @@ public class KusaruAbility : MonoBehaviour
         {
             Debug.Log("Ability activated");
             timerOn = true;
-            playeraAbility = true;
-            testAttack.enabled = false;
-            shoot.enabled = true;
-            shoot.gun.SetActive(true);
-            KusaruButton.interactable = false;
+
+            testAttack.enabled = true;
+            powerupKnockback = true;
+            testAttack.repulseForce += 20;
+            testAttack.knocBackCount += 15;
+            testMovement.movementSpeed += 2;
+            testMovement.jumpForce += 2;
+            samuButton.interactable = false;
+            abilityActive = false;
+
         }
 
         else if (abilityTimer >= maxAbilityTime)
         {
             playeraAbility = false;
-            testAttack.enabled = true;
-            shoot.enabled = false;
+
             coolDownTimer = true;
-            shoot.gun.SetActive(false);
-            KusaruButton.interactable = true;
+            samuButton.interactable = true;
             abilityTimer = 0;
+
+            if (!abilityActive)
+            {
+                testAttack.repulseForce -= 20;
+                testAttack.knocBackCount -= 15;
+                testMovement.movementSpeed -= 2;
+                testMovement.jumpForce -= 2;
+            }
+            abilityActive = true;
         }
     }
 
@@ -68,4 +84,6 @@ public class KusaruAbility : MonoBehaviour
             coolDownTimer = false;
         }
     }
+
+
 }

@@ -14,7 +14,7 @@ public class TestAttack : MonoBehaviour, IPushable
 
     public TMP_Text Knockbacktracker;
 
-    [SerializeField] float tracker;
+    public float tracker;
 
     public string attackInput, blockInput, abilityInput, verticalInput;
     public string crouchInput;
@@ -145,7 +145,7 @@ public class TestAttack : MonoBehaviour, IPushable
 
         if (knocBackCount % 2 == 0)
         {
-            knocBackCount += 5;
+            knocBackCount += 6;
         }
 
         else if (knocBackCount >= 200f)
@@ -177,10 +177,10 @@ public class TestAttack : MonoBehaviour, IPushable
             playerIndicationTimer = 0;
             startPlayerIndicationTimer = false;
         }
-        else if (!startPlayerIndicationTimer)
+        if (!startPlayerIndicationTimer)
         {
             spriteRenderer.color = Color.white;
-            testMovement2D.anim.SetTrigger("Damge");
+            testMovement2D.anim.ResetTrigger("Damge");
         }
 
     }
