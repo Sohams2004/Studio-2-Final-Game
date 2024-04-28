@@ -54,6 +54,7 @@ public class TestAttack : MonoBehaviour, IPushable
                 isKnockBacked = true;
                 repulseForce++;
                 KnockBackTrack();
+
                 spriteRenderer = target[i].GetComponent<SpriteRenderer>();
                 var sprite = spriteRenderer;
                 sprite.color = Color.red;
@@ -148,6 +149,7 @@ public class TestAttack : MonoBehaviour, IPushable
             knocBackCount += 5;
         }
 
+
         else if (knocBackCount >= 200f)
         {
             knocBackCount = 0;
@@ -177,7 +179,7 @@ public class TestAttack : MonoBehaviour, IPushable
             playerIndicationTimer = 0;
             startPlayerIndicationTimer = false;
         }
-        else if (!startPlayerIndicationTimer)
+        if (!startPlayerIndicationTimer)
         {
             spriteRenderer.color = Color.white;
             testMovement2D.anim.SetTrigger("Damge");
