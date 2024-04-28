@@ -59,12 +59,9 @@ public class TestAttack : MonoBehaviour, IPushable
                 sprite.color = Color.red;
                 startPlayerIndicationTimer = true;
 
-                //target[i].attachedRigidbody.velocity = new Vector2(testMovement2D.facingDirection, 0) * repulseForce;
-                /*knockBackObject = gameObject.GetComponent<KnockBackObject>();
-                if (knockBackObject is not null)
-                {
-                    Vector2 knockBackDirection = (transform.position - attackPos.position).normalized;
-                }*/
+
+                isKnockBacked = true;
+                KnockBackTrack();
             }
         }
         else
@@ -120,15 +117,11 @@ public class TestAttack : MonoBehaviour, IPushable
             blockTime += Time.deltaTime;
             if (blockTime <= 3)
             {
-                //int layerMask = LayerMask.GetMask("Default");
-                //gameObject.layer = layerMask;
                 testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
             }
 
             if (blockTime > 3)
             {
-                //int layerMask = LayerMask.GetMask("Opponent");
-                //gameObject.layer = layerMask;
                 testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
                 testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 blockTime = 0;
@@ -138,8 +131,6 @@ public class TestAttack : MonoBehaviour, IPushable
 
         if (Input.GetButtonUp(blockInput))
         {
-            //int layerMask = LayerMask.GetMask("Opponent");
-            //gameObject.layer = layerMask;
             testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
             testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
             blockTime = 0;
