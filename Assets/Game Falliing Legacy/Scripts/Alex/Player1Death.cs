@@ -20,9 +20,11 @@ public class Player1Death : MatchManager
     [SerializeField] GameObject player1health2;
     [SerializeField] GameObject player1health3;
     [SerializeField] GameObject player1health4;
+
     void Start()
     {
         outOfSight.SetActive(false);
+        attack = GetComponent<TestAttack>();
     }
     async private void OnTriggerEnter2D(Collider2D other)
     {

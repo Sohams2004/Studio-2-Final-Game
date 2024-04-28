@@ -20,6 +20,7 @@ public class Player2Death : MatchManager
     void Start()
     {
         outOfSight.SetActive(false);
+        attack = GetComponent<TestAttack>();
     }
     async private void OnTriggerEnter2D(Collider2D other)
     {
