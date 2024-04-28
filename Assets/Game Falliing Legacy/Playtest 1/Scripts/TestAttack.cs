@@ -47,6 +47,7 @@ public class TestAttack : MonoBehaviour, IPushable
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
                 isKnockBacked = true;
+                repulseForce++;
                 KnockBackTrack();
                 //target[i].attachedRigidbody.velocity = new Vector2(testMovement2D.facingDirection, 0) * repulseForce;
                 /*knockBackObject = gameObject.GetComponent<KnockBackObject>();
@@ -163,5 +164,18 @@ public class TestAttack : MonoBehaviour, IPushable
         Block();
         AbilityActivate();
         AttackUpwards();
+
+        if (isKnockBacked)
+        {
+            testMovement2D.anim.SetBool("Damge", true);
+        }
+        else if (!isKnockBacked)
+        {
+            testMovement2D.anim.SetBool("Damge", false);
+        }
+        else
+        {
+
+        }
     }
 }

@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityNormal: 2
-  gravityFalling: 60
+  gravityFalling: 41
   players: 1
   states: 0
   movementSpeed: 10

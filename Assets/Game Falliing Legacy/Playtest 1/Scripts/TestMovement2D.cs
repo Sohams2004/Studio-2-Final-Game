@@ -75,7 +75,7 @@ public class TestMovement2D : MonoBehaviour
                 
                 break;
         }*/
-       // SetInput();
+        // SetInput();
     }
 
 
@@ -203,7 +203,11 @@ public class TestMovement2D : MonoBehaviour
             playerRb.gravityScale = gravityNormal;
             anim.SetBool("Fall", false);
 
+
         }
+
+
+
 
 
 

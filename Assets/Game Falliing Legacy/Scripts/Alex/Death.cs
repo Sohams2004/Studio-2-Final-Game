@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Death : MatchManager
 {
@@ -36,7 +35,7 @@ public class Death : MatchManager
         if (other.tag == "Player 1")
         {
             stillin1 = true;
-            await Task.Delay(500);
+            await Task.Delay(300);
 
             if (stillin1)
             {
@@ -45,7 +44,7 @@ public class Death : MatchManager
                 await Task.Delay(1200);
 
                 player1Lives--;
-                WinCondition();
+
                 if (player1Lives == 4)
                 {
                     player1health4.SetActive(false);
@@ -75,10 +74,12 @@ public class Death : MatchManager
                 {
 
                     kO.Play();
-                    Destroy(other.gameObject);
                     outOfSight.SetActive(true);
                     await Task.Delay(2000);
-                    SceneManager.LoadScene(1);
+                    p1WinUI.SetActive(true);
+                    Time.timeScale = 0;
+                    Destroy(other.gameObject);
+
                 }
             }
             else if (!stillin1)
@@ -103,7 +104,6 @@ public class Death : MatchManager
                 await Task.Delay(1200);
 
                 player2Lives--;
-                WinCondition();
 
                 if (player2Lives == 4)
                 {
@@ -135,10 +135,12 @@ public class Death : MatchManager
                 {
 
                     kO.Play();
-                    Destroy(other.gameObject);
+
                     outOfSight.SetActive(true);
                     await Task.Delay(2000);
-                    SceneManager.LoadScene(1);
+                    WinCondition();
+                    Destroy(other.gameObject);
+
                 }
             }
             else if (!stillin2)
