@@ -6,7 +6,7 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] protected float attackRange;
     [SerializeField] public float repulseForce;
-    [SerializeField] int knocBackCount;
+    public int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
