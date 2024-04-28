@@ -16,6 +16,12 @@ public class TestAttack : MonoBehaviour, IPushable
 
     [SerializeField] float tracker;
 
+    [SerializeField] float playerIndicationTimer;
+    [SerializeField] bool startPlayerIndicationTimer;
+
+    [SerializeField] SpriteRenderer spriteRenderer;
+
+
     public string attackInput, blockInput, abilityInput, verticalInput;
     public string crouchInput;
     public bool isBlocking;
