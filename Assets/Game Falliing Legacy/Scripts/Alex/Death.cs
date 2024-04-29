@@ -90,7 +90,7 @@ public class Death : MatchManager
 
             }
 
-
+        }
 
         if (other.tag == "Player 2")
         {
@@ -170,4 +170,5 @@ public class Death : MatchManager
             await Task.Delay(400);
         }
     }
+
 }
