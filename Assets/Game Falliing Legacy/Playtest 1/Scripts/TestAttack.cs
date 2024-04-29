@@ -1,7 +1,5 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.U2D;
 
 public class TestAttack : MonoBehaviour, IPushable
 {
@@ -13,6 +11,7 @@ public class TestAttack : MonoBehaviour, IPushable
     [SerializeField] float blockTime, blockPauseTimer;
     [SerializeField] float playerIndicationTimer;
     [SerializeField] bool startPlayerIndicationTimer;
+
     [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
     [SerializeField] protected LayerMask opponentLayer;
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -50,12 +49,11 @@ public class TestAttack : MonoBehaviour, IPushable
                 attackedObject = target[i].gameObject;
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
-<<<<<<< HEAD
+
                 isKnockBacked = true;
                 repulseForce++;
                 KnockBackTrack();
-=======
->>>>>>> 735364b (Revert "Merge branch 'main' into Soham")
+
                 spriteRenderer = target[i].GetComponent<SpriteRenderer>();
                 var sprite = spriteRenderer;
                 sprite.color = Color.red;
@@ -161,7 +159,7 @@ public class TestAttack : MonoBehaviour, IPushable
             playerIndicationTimer += Time.deltaTime;
         }
 
-        }
+
         else if (!isKnockBacked)
         {
             playerIndicationTimer = 0;
@@ -173,4 +171,5 @@ public class TestAttack : MonoBehaviour, IPushable
             testMovement2D.anim.ResetTrigger("Damge");
         }
     }
+
 }
