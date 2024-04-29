@@ -14,7 +14,7 @@ public class TestAttack : MonoBehaviour, IPushable
 
     public TMP_Text Knockbacktracker;
 
-    [SerializeField] float tracker;
+    public float tracker;
 
     public string attackInput, blockInput, abilityInput, verticalInput;
     public string crouchInput;
@@ -28,21 +28,7 @@ public class TestAttack : MonoBehaviour, IPushable
     [SerializeField] float playerIndicationTimer;
     [SerializeField] bool startPlayerIndicationTimer;
 
-    [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
-    [SerializeField] protected LayerMask opponentLayer;
     [SerializeField] SpriteRenderer spriteRenderer;
-
-    public TMP_Text Knockbacktracker;
-
-    public float tracker;
-
-    public string attackInput, blockInput, verticalInput;
-    public string crouchInput;
-    public bool isBlocking;
-    public bool isKnockBacked;
-    public Collider2D[] target;
-    protected GameObject attackedObject;
-    protected TestMovement2D testMovement2D;
 
     private void Start()
     {
@@ -65,11 +51,9 @@ public class TestAttack : MonoBehaviour, IPushable
                 attackedObject = target[i].gameObject;
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
-
                 isKnockBacked = true;
                 repulseForce++;
                 KnockBackTrack();
-
                 spriteRenderer = target[i].GetComponent<SpriteRenderer>();
                 var sprite = spriteRenderer;
                 sprite.color = Color.red;
@@ -95,12 +79,24 @@ public class TestAttack : MonoBehaviour, IPushable
         {
             Debug.Log(joystickUp);
             attackPos.position = upAttackPos.position;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
 
         else
         {
             Debug.Log(joystickUp);
             attackPos.position = originalAttackPos.position;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
+
+    void AbilityActivate()
+    {
+        if (Input.GetButtonDown(abilityInput))
+        {
+            Debug.Log("Ability activated");
+            playeraAbility = true;
         }
     }
 
@@ -152,7 +148,6 @@ public class TestAttack : MonoBehaviour, IPushable
             knocBackCount += 6;
         }
 
-
         else if (knocBackCount >= 200f)
         {
             knocBackCount = 0;
@@ -168,15 +163,16 @@ public class TestAttack : MonoBehaviour, IPushable
     {
         PlayerAttack();
         Block();
+        AbilityActivate();
         AttackUpwards();
-        testMovement2D.anim.SetBool("Damge", true);
-        if (isKnockBacked)
+
+        if (startPlayerIndicationTimer)
         {
             playerIndicationTimer += Time.deltaTime;
+            testMovement2D.anim.SetTrigger("Damge");
         }
 
-
-        else if (!isKnockBacked)
+        if (playerIndicationTimer >= 0.5f)
         {
             playerIndicationTimer = 0;
             startPlayerIndicationTimer = false;
@@ -186,6 +182,6 @@ public class TestAttack : MonoBehaviour, IPushable
             spriteRenderer.color = Color.white;
             testMovement2D.anim.ResetTrigger("Damge");
         }
-    }
 
+    }
 }
