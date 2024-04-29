@@ -17,10 +17,14 @@ public class Player2Death : MatchManager
     [SerializeField] GameObject player2health4;
 
     private TestAttack attack;
+    public GameObject p1WinUI;
+
     void Start()
     {
         outOfSight.SetActive(false);
         attack = GetComponent<TestAttack>();
+
+        p1WinUI.SetActive(false);
     }
     async private void OnTriggerEnter2D(Collider2D other)
     {
