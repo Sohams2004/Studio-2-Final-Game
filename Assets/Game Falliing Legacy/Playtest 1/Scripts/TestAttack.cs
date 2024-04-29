@@ -9,6 +9,22 @@ public class TestAttack : MonoBehaviour, IPushable
     [SerializeField] int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
+    [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
+    [SerializeField] protected LayerMask opponentLayer;
+
+    public TMP_Text Knockbacktracker;
+
+    [SerializeField] float tracker;
+
+    public string attackInput, blockInput, abilityInput, verticalInput;
+    public string crouchInput;
+    public bool isBlocking;
+    public bool isKnockBacked;
+    public bool playeraAbility;
+    public Collider2D[] target;
+    protected GameObject attackedObject;
+    protected TestMovement2D testMovement2D;
+
     [SerializeField] float playerIndicationTimer;
     [SerializeField] bool startPlayerIndicationTimer;
 
