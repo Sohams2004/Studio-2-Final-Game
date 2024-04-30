@@ -1,7 +1,5 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.U2D;
 
 public class TestAttack : MonoBehaviour, IPushable
 {
@@ -11,20 +9,18 @@ public class TestAttack : MonoBehaviour, IPushable
     public int knocBackCount;
     [SerializeField] float knockBackInterval;
     [SerializeField] float blockTime, blockPauseTimer;
-    [SerializeField] float playerIndicationTimer;
-    [SerializeField] bool startPlayerIndicationTimer;
     [SerializeField] protected Transform originalAttackPos, attackPos, upAttackPos;
     [SerializeField] protected LayerMask opponentLayer;
-    [SerializeField] SpriteRenderer spriteRenderer;
 
     public TMP_Text Knockbacktracker;
 
     public float tracker;
 
-    public string attackInput, blockInput, verticalInput;
+    public string attackInput, blockInput, abilityInput, verticalInput;
     public string crouchInput;
     public bool isBlocking;
     public bool isKnockBacked;
+    public bool playeraAbility;
     public Collider2D[] target;
     protected GameObject attackedObject;
     protected TestMovement2D testMovement2D;
@@ -55,12 +51,6 @@ public class TestAttack : MonoBehaviour, IPushable
                 attackedObject = target[i].gameObject;
                 Debug.Log("Knockbakced");
                 target[i].attachedRigidbody.AddForce(new Vector2(testMovement2D.facingDirection * repulseForce, 0), ForceMode2D.Impulse);
-                spriteRenderer = target[i].GetComponent<SpriteRenderer>();
-                var sprite = spriteRenderer;
-                sprite.color = Color.red;
-                startPlayerIndicationTimer = true;
-
-                
                 isKnockBacked = true;
                 repulseForce++;
                 KnockBackTrack();
@@ -89,12 +79,24 @@ public class TestAttack : MonoBehaviour, IPushable
         {
             Debug.Log(joystickUp);
             attackPos.position = upAttackPos.position;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
 
         else
         {
             Debug.Log(joystickUp);
             attackPos.position = originalAttackPos.position;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.None;
+            //testMovement2D.playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
+
+    void AbilityActivate()
+    {
+        if (Input.GetButtonDown(abilityInput))
+        {
+            Debug.Log("Ability activated");
+            playeraAbility = true;
         }
     }
 
@@ -161,6 +163,7 @@ public class TestAttack : MonoBehaviour, IPushable
     {
         PlayerAttack();
         Block();
+        AbilityActivate();
         AttackUpwards();
 
         if (startPlayerIndicationTimer)
@@ -180,15 +183,5 @@ public class TestAttack : MonoBehaviour, IPushable
             testMovement2D.anim.ResetTrigger("Damge");
         }
 
-        if (playerIndicationTimer >= 0.5f)
-        {
-            playerIndicationTimer = 0;
-            startPlayerIndicationTimer = false;
-        }
-
-        if (!startPlayerIndicationTimer)
-        {
-            spriteRenderer.color = Color.white;
-        }
     }
 }
