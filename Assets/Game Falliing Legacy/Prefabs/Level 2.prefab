@@ -7231,7 +7231,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.1399, y: -10.14464, z: 0}
-  m_LocalScale: {x: 17.691355, y: 9.570254, z: 1.6098773}
+  m_LocalScale: {x: 10, y: 9.570254, z: 1.6098773}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5463002216318284530}
@@ -8007,6 +8007,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -567897485
       objectReference: {fileID: 0}
+    - target: {fileID: 2325607571705323006, guid: 924ccb3368dbc774abf58206bc0fc655, type: 3}
+      propertyPath: m_TagString
+      value: DangerZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217384451063048165, guid: 924ccb3368dbc774abf58206bc0fc655, type: 3}
+      propertyPath: m_TagString
+      value: DangerZone
+      objectReference: {fileID: 0}
     - target: {fileID: 3648178252913007749, guid: 924ccb3368dbc774abf58206bc0fc655, type: 3}
       propertyPath: m_Color.a
       value: 0.1764706
@@ -8143,7 +8151,9 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0552
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2991804608022097076, guid: 924ccb3368dbc774abf58206bc0fc655, type: 3}
+    - {fileID: 6559188431593529600, guid: 924ccb3368dbc774abf58206bc0fc655, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1856767830255008350, guid: 924ccb3368dbc774abf58206bc0fc655, type: 3}
     m_AddedGameObjects: []

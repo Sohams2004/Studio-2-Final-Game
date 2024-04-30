@@ -108,7 +108,7 @@ MonoBehaviour:
   player1: {fileID: 0}
   player2: {fileID: 0}
   minZoom: 5
-  maxZoom: 30
+  maxZoom: 35
   zoomSpeed: 5
   followSpeed: 5
   border: {fileID: 7714659026866312421}

@@ -62,4 +62,6 @@ public class FighterCamController : MonoBehaviour
             yield return null;
         }
     }
+
+
 }
